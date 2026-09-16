@@ -23,7 +23,7 @@ The site's proof is a real study: on 15 September 2026 the homepages of 44 well-
 
 ## Before going live
 
-1. **Fill the placeholders.** Search for `[ADD:` in `en/imprint.html`, `de/imprint.html` and `ro/imprint.html` (postal address, legal form, tax ID). The German Impressum needs a full address.
+1. **Check the imprint.** The three imprint pages carry the postal address in Brașov, the phone number and postcode 500170 (looked up, worth verifying), and no registration data. Add the CUI, trade register number and VAT ID once a PFA or SRL exists; they belong in all three pages.
 2. **Check the translations.** The German and Romanian copy was drafted in one pass; read every page once.
 3. **Activate the form.** The first submission through the contact form sends a one-time activation e-mail from FormSubmit to the address in `assets/js/main.js` (`CONFIG.email`). Click the link once. To use a different address, change it in `main.js` and in the `action` attribute of every `<form>`.
 4. **Base URL.** All canonical, hreflang and Open Graph URLs point to `https://danielbutnar2003.github.io/accessibility-portfolio`. When a custom domain is set, search-and-replace that string in every `.html`, `sitemap.xml`, `robots.txt` and `.well-known/security.txt`, and add a `CNAME` file. The `404.html` uses absolute `/accessibility-portfolio/` paths for the same reason; change them to `/` on a custom domain.
