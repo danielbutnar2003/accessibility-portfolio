@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Accesibilitate web pentru magazine online | Daniel Butnar</title>
+<meta name="description" content="Audituri WCAG 2.1 AA și remediere în cod pentru magazine online și servicii, conform Legii 232/2022. Verificare rapidă de la 490 €.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:title" content="Accesibilitate web pentru magazine online | Daniel Butnar">
+<meta property="og:description" content="Audituri WCAG 2.1 AA și remediere în cod pentru magazine online și servicii, conform Legii 232/2022 și European Accessibility Act. Verificare rapidă de la 490 €.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/ro/">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person",
+      "name": "Daniel Butnar",
+      "jobTitle": "Dezvoltator web și specialist în accesibilitate digitală",
+      "url": "https://danielbutnar2003.github.io/accessibility-portfolio/ro/",
+      "email": "daniel.butnar@gmail.com",
+      "image": "https://danielbutnar2003.github.io/accessibility-portfolio/assets/img/daniel.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "București", "addressCountry": "RO" },
+      "knowsLanguage": ["ro", "de", "en"],
+      "sameAs": ["https://github.com/danielbutnar2003", "https://github.com/danielbutnar", "https://goactivebucharest.me/daniel-butnar.html"]
+    },
+    {
+      "@type": "Service",
+      "name": "Audit de accesibilitate și remediere (WCAG 2.1 AA, EN 301 549, Legea 232/2022)",
+      "serviceType": "Consultanță în accesibilitate digitală",
+      "provider": { "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person" },
+      "areaServed": ["RO", "DE", "AT"],
+      "availableLanguage": ["ro", "de", "en"],
+      "offers": [
+        { "@type": "Offer", "name": "Verificare rapidă", "price": "490", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Audit complet", "price": "1900", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Remediere în cod", "price": "2500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Monitorizare", "price": "250", "priceCurrency": "EUR" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Sari la conținut</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./" aria-current="page"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Accesibilitate web</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Meniu" data-close="Închide"><span class="burger__label">Meniu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="#services">Servicii</a></li>
+        <li><a href="study.html">Studiul</a></li>
+        <li><a href="report.html">Raport model</a></li>
+        <li><a href="../en/demo.html" hreflang="en">Înainte/după (EN)</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Limbă">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../de/" hreflang="de" lang="de">DE</a>
+      <a href="../ro/" aria-current="true" hreflang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero">
+    <div class="wrap grid grid--side">
+      <div>
+        <h1>Magazinul tău online trebuie să fie accesibil prin lege. Eu găsesc barierele și le repar în cod.</h1>
+        <p class="lead">Audituri WCAG 2.1 AA și remediere pentru magazine și servicii din România, Germania și Austria. Legea 232/2022 se aplică din 28 iunie 2025, iar autoritățile au început verificările.</p>
+        <div class="cluster">
+          <a class="btn btn--signal" href="#contact">Rezervă o verificare rapidă, 490 €</a>
+          <a class="btn btn--ghost" href="study.html">Vezi studiul cu 42 de magazine</a>
+        </div>
+        <p class="hero__law">România: Legea 232/2022. UE: European Accessibility Act. Germania: BFSG. Austria: BaFG. Standardul tehnic din spatele tuturor este EN 301 549, adică WCAG 2.1 nivel AA.</p>
+      </div>
+
+      <div class="demo">
+        <p class="sr-only">Ilustrație: o pagină de produs tipică, cu patru bariere marcate. Imaginea produsului nu are text alternativ, câmpul de căutare nu are etichetă, textul butonului are un contrast de 3,3 la 1 în loc de 4,5 la 1, iar butonul-pictogramă pentru lista de dorințe nu are nume.</p>
+        <div class="mock" aria-hidden="true">
+          <div class="mock__bar"><span class="mock__logo"></span><span class="mock__search"></span><span class="mock__cart"></span></div>
+          <div class="mock__body">
+            <div class="mock__img"></div>
+            <div class="mock__info">
+              <div class="mock__title"></div>
+              <div class="mock__title mock__title--2"></div>
+              <div class="mock__price">249,90 lei</div>
+              <div class="mock__cta"></div>
+              <div class="mock__field"></div>
+              <div class="mock__icon"></div>
+            </div>
+          </div>
+          <span class="marker marker--fail" style="--x: 3%; --y: 34%; --i: 0">Imagine fără text alternativ</span>
+          <span class="marker marker--fail" style="--x: 24%; --y: -7%; --i: 1">Câmp de căutare fără etichetă</span>
+          <span class="marker marker--fail" style="--x: 50%; --y: 57%; --i: 2">Contrast 3,3:1, necesar 4,5:1</span>
+          <span class="marker marker--fail" style="--x: 44%; --y: 90%; --i: 3">Buton-pictogramă fără nume</span>
+        </div>
+        <label class="demo__toggle"><input type="checkbox" id="show-barriers" checked> Arată barierele din ilustrație</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <h2 id="proof-title" class="sr-only">Rezultatele studiului meu pe 42 de pagini principale de magazine</h2>
+      <ul class="proof__list">
+        <li><span class="proof__n">42</span><span class="proof__l">pagini principale verificate pe 15 septembrie 2026: 24 din România, 18 din Germania</span></li>
+        <li><span class="proof__n">37 din 42</span><span class="proof__l">pică cel puțin o verificare WCAG 2.1 AA pe care un scanner o poate detecta</span></li>
+        <li><span class="proof__n">100 %</span><span class="proof__l">dintre magazinele românești pică, față de 72 % dintre cele germane</span></li>
+        <li><span class="proof__n">4 tipuri</span><span class="proof__l">de probleme produc 87 % din toate erorile: contrast, linkuri goale, imagini fără text alternativ, butoane fără nume</span></li>
+      </ul>
+      <p class="small muted" style="margin: .5rem 0 1.2rem">Verificările automate găsesc doar o parte din bariere, deci cifrele sunt limite inferioare. <a href="study.html">Metoda, tabelul și observațiile</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="law-title">
+    <div class="wrap">
+      <h2 id="law-title" class="section-title">Ce îți cere legea</h2>
+      <p class="lead measure">Trei lucruri pe care orice proprietar de magazin ar trebui să le știe înainte să primească o notificare de la autorități.</p>
+      <ul class="facts" style="margin-top: 2rem">
+        <li>
+          <h3>Se aplică din 28 iunie 2025</h3>
+          <p>Legea 232/2022 transpune European Accessibility Act și acoperă magazinele online, serviciile bancare, biletele și transportul, telecomunicațiile și cărțile electronice. Site-urile existente nu au o perioadă generală de grație; reguli tranzitorii există doar pentru contractele semnate înainte de această dată.</p>
+          <p>Microîntreprinderile cu sub 10 angajați și sub 2 milioane € cifră de afaceri sunt exceptate pentru servicii.</p>
+        </li>
+        <li>
+          <h3>Ștacheta este WCAG 2.1 AA</h3>
+          <p>Legea trimite la standardul EN 301 549, care trimite la WCAG 2.1 nivel AA: contrast suficient, utilizare completă de la tastatură, nume pentru fiecare control, structură clară, formulare utilizabile și zoom la 200 %.</p>
+          <p>Trebuie să publici și o declarație de accesibilitate.</p>
+        </li>
+        <li>
+          <h3>Verificările au început</h3>
+          <p>În România, ANPC, ADR și ANCOM supraveghează aplicarea Legii 232/2022 și pot aplica sancțiuni contravenționale. În Germania, amenzile ajung la 100.000 € și primele somații au fost trimise din august 2025.</p>
+          <p>Dacă vinzi și în Germania sau Austria, BFSG și BaFG ți se aplică direct.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="process-title">
+    <div class="wrap">
+      <h2 id="process-title" class="section-title">Cum lucrez</h2>
+      <p class="lead measure">Mai întâi auditul, apoi remedierea în codul tău real, apoi o declarație pe care o poți susține.</p>
+      <ol class="steps" style="margin-top: 2rem">
+        <li><div class="step__body"><h3>Verificare rapidă, 3 zile lucrătoare</h3><p>Scanare automată a paginii principale, a unei pagini de produs și a coșului, plus o trecere manuală cu tastatura și cititorul de ecran. Primești o listă prioritizată și o ofertă cu preț fix pentru restul.</p></div></li>
+        <li><div class="step__body"><h3>Audit complet, 2 săptămâni</h3><p>Toate șabloanele, verificate după lista WCAG 2.1 AA: NVDA și VoiceOver, doar tastatură, zoom 200 %, mobil. Un raport cu care dezvoltatorii tăi pot lucra direct, plus o schiță a declarației de accesibilitate.</p></div></li>
+        <li><div class="step__body"><h3>Remediere în cod</h3><p>Implementez corecțiile în tema sau front-end-ul tău, Shopify, WooCommerce, Magento, PrestaShop, Gomag sau soluție proprie, sub formă de pull request-uri pe care le poți revizui. Fiecare corecție este retestată.</p></div></li>
+        <li><div class="step__body"><h3>Declarație și monitorizare</h3><p>Declarația de accesibilitate este publicată, o scanare lunară urmărește regresiile și fiecare lansare primește o verificare prin sondaj.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 id="services-title" class="section-title">Servicii și prețuri</h2>
+      <p class="lead measure">Prețuri fixe acolo unde scopul este fix, ofertă acolo unde depinde de codul tău. Toate prețurile sunt fără TVA.</p>
+      <div class="table-wrap" style="margin-top: 2rem" role="region" aria-label="Tabel servicii" tabindex="0">
+        <table class="packages">
+          <caption class="sr-only">Patru servicii cu conținut, termen de livrare și preț</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Detaliu</span></th>
+              <th scope="col">Verificare rapidă</th>
+              <th scope="col" class="featured">Audit complet</th>
+              <th scope="col">Remediere în cod</th>
+              <th scope="col">Monitorizare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Potrivit pentru</th>
+              <td>Să știi unde ești înainte să stabilești bugetul</td>
+              <td>Magazine și servicii care au nevoie de imaginea completă și de o declarație</td>
+              <td>Să ajungi la conformitate fără să blochezi propria echipă</td>
+              <td>Să rămâi conform după fiecare lansare</td>
+            </tr>
+            <tr>
+              <th scope="row">Include</th>
+              <td>3 pagini-cheie, verificări automate și manuale, listă prioritizată, ofertă</td>
+              <td>Până la 10 șabloane, lista completă WCAG 2.1 AA, cititoare de ecran, tastatură, zoom, mobil, raport pentru dezvoltatori, schiță de declarație</td>
+              <td>Implementare în codul tău sub formă de pull request-uri revizuite, retestare, declarație finală</td>
+              <td>Scanare automată lunară, verificare manuală trimestrială, actualizarea declarației</td>
+            </tr>
+            <tr>
+              <th scope="row">Termen</th>
+              <td>3 zile lucrătoare</td>
+              <td>2 săptămâni</td>
+              <td>În funcție de volum, de obicei 2 până la 6 săptămâni</td>
+              <td>Continuu, se poate anula lunar</td>
+            </tr>
+            <tr>
+              <th scope="row">Preț</th>
+              <td><span class="price">490 €</span></td>
+              <td><span class="price">de la 1.900 €</span></td>
+              <td><span class="price">de la 2.500 €<small>ofertă după audit</small></span></td>
+              <td><span class="price">250 €<small>pe lună</small></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="sr-only">Acțiune</span></th>
+              <td><a class="btn btn--signal" href="#contact">Rezervă verificarea</a></td>
+              <td><a class="btn" href="#contact">Solicită un audit</a></td>
+              <td><a class="btn btn--ghost" href="#contact">Cere o ofertă</a></td>
+              <td><a class="btn btn--ghost" href="#contact">Întreabă de monitorizare</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top: 1rem">Agenții: lucrez și în regim white-label, audituri și remedieri livrate sub numele vostru.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="finding-title">
+    <div class="wrap grid grid--side">
+      <div>
+        <h2 id="finding-title" class="section-title">Cum arată o constatare</h2>
+        <p>Fiecare problemă din rapoartele mele numește regula, impactul, câte elemente sunt afectate, unde sunt și cum se repară. Aceasta este reală, luată de la un magazin românesc de electronice de mărime medie din studiu.</p>
+        <p><a href="report.html">Citește raportul model complet</a> sau <a href="../en/demo.html" hreflang="en">vezi șase bariere frecvente înainte și după (în engleză)</a>.</p>
+      </div>
+      <article class="finding">
+        <div class="finding__head">
+          <h3>Butoanele caruselului nu au nume accesibil</h3>
+          <span class="badge badge--critical">Critic</span>
+        </div>
+        <div class="finding__meta"><span>WCAG 4.1.2 Nume, rol, valoare</span><span>regula axe button-name</span><span>9 elemente</span></div>
+        <dl>
+          <dt>Constatare</dt><dd>Punctele sliderului de pe pagina principală sunt butoane care conțin un <code>span</code> gol. Un cititor de ecran anunță „buton” de nouă ori, fără nicio indicație despre ce face fiecare.</dd>
+          <dt>Remediere</dt><dd>Fiecare buton primește o etichetă vizibilă sau ascunsă vizual, iar cel curent este marcat.</dd>
+        </dl>
+<pre><code>&lt;!-- găsit --&gt;
+&lt;button class="owl-dot"&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+
+&lt;!-- reparat --&gt;
+&lt;button class="owl-dot" aria-current="true"&gt;
+  &lt;span class="sr-only"&gt;Slide 1 din 9&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="about-title">
+    <div class="wrap about">
+      <img src="../assets/img/daniel.jpg" alt="Daniel Butnar" width="320" height="400" loading="lazy">
+      <div>
+        <h2 id="about-title" class="section-title">Cu cine ai lucra</h2>
+        <p>Sunt Daniel Butnar, dezvoltator web în București. Construiesc cu Next.js, React și HTML simplu și mi-am ținut propriile site-uri la nivelul WCAG AA dinainte ca legea să o ceară. Vorbesc română, germană și engleză, așa că auditul, declarația și predarea către dezvoltatori vin în limba ta, iar cu agenția ta pot vorbi direct.</p>
+        <p>Folosesc instrumente automate, inclusiv verificare de cod asistată de AI, ca să acopăr rapid terenul. Fiecare constatare din raport este verificată manual, pentru că scannerele găsesc doar o parte din probleme, iar un raport plin de alarme false irosește timpul dezvoltatorilor tăi.</p>
+        <ul class="tools" aria-label="Instrumente cu care testez">
+          <li>axe-core</li><li>NVDA</li><li>VoiceOver</li><li>Doar tastatură</li><li>Zoom 200 %</li><li>Chrome și Firefox</li><li>iOS și Android</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink on-ink" id="contact" aria-labelledby="contact-title">
+    <div class="wrap grid grid--side">
+      <div>
+        <h2 id="contact-title" class="section-title">Rezervă o verificare rapidă</h2>
+        <p class="lead">Trimite-mi adresa magazinului tău. Primești un răspuns într-o zi lucrătoare și raportul în trei.</p>
+        <p>Preferi e-mailul? Scrie la <a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a>.</p>
+        <p class="small muted">Formularul este livrat prin FormSubmit; vezi <a href="privacy.html">politica de confidențialitate</a>. Nu se setează cookie-uri.</p>
+      </div>
+      <form class="form" method="post" action="https://formsubmit.co/daniel.butnar@gmail.com" data-form data-subject="Cerere verificare rapidă" data-msg-invalid="Te rog verifică rubricile marcate." data-msg-sending="Se trimite…" data-msg-ok="Mulțumesc, mesajul tău este pe drum. Răspund într-o zi lucrătoare." data-msg-err="Trimiterea a eșuat. Te rog scrie-mi direct la" novalidate>
+        <input type="hidden" name="_subject" value="Cerere verificare rapidă">
+        <input type="hidden" name="_template" value="table">
+        <div class="honey" aria-hidden="true"><label>Lasă acest câmp gol <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field" data-error="Te rog scrie numele tău.">
+          <label for="f-name">Numele tău</label>
+          <input id="f-name" name="Name" type="text" required autocomplete="name">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field" data-error="Te rog introdu o adresă de e-mail validă, de exemplu nume@firma.ro.">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" name="Email" type="email" required autocomplete="email" aria-describedby="f-email-hint">
+          <span class="hint" id="f-email-hint">La această adresă răspund.</span>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-company">Compania</label>
+          <input id="f-company" name="Company" type="text" autocomplete="organization">
+        </div>
+        <div class="field" data-error="Te rog introdu adresa magazinului, începând cu https://.">
+          <label for="f-site">Adresa magazinului</label>
+          <input id="f-site" name="Website" type="url" required inputmode="url" placeholder="https://" autocomplete="url">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field" data-error="Te rog scrie un mesaj scurt.">
+          <label for="f-msg">De ce ai nevoie?</label>
+          <textarea id="f-msg" name="Message" required minlength="10" maxlength="3000"></textarea>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <p class="form__status" role="status" aria-live="polite"></p>
+        <div><button class="btn btn--signal" type="submit">Trimite cererea</button></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Dezvoltator web în București. Audituri de accesibilitate și remediere pentru magazine online și servicii din România, Germania și Austria.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Pagini</h2>
+        <ul>
+          <li><a href="#services">Servicii și prețuri</a></li>
+          <li><a href="study.html">Studiul: 42 de magazine verificate</a></li>
+          <li><a href="report.html">Raport de audit model</a></li>
+          <li><a href="../en/demo.html" hreflang="en">Înainte/după (în engleză)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Confidențialitate</a></li>
+          <li><a href="imprint.html">Date de identificare</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>Fără cookie-uri, fără urmărire. Realizat conform WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

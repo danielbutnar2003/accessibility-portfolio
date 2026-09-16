@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Barrierefreie Onlineshops nach BFSG | Daniel Butnar</title>
+<meta name="description" content="WCAG-2.1-AA-Audits und Umsetzung im Code für Onlineshops und Dienstleister nach BFSG, BaFG und European Accessibility Act. Schnellcheck ab 490 €.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ro_RO">
+<meta property="og:title" content="Barrierefreie Onlineshops nach BFSG | Daniel Butnar">
+<meta property="og:description" content="WCAG-2.1-AA-Audits und Umsetzung im Code für Onlineshops und Dienstleister nach BFSG, BaFG und European Accessibility Act. Schnellcheck ab 490 €.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/de/">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person",
+      "name": "Daniel Butnar",
+      "jobTitle": "Webentwickler und Spezialist für digitale Barrierefreiheit",
+      "url": "https://danielbutnar2003.github.io/accessibility-portfolio/de/",
+      "email": "daniel.butnar@gmail.com",
+      "image": "https://danielbutnar2003.github.io/accessibility-portfolio/assets/img/daniel.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bukarest", "addressCountry": "RO" },
+      "knowsLanguage": ["de", "ro", "en"],
+      "sameAs": ["https://github.com/danielbutnar2003", "https://github.com/danielbutnar", "https://goactivebucharest.me/daniel-butnar.html"]
+    },
+    {
+      "@type": "Service",
+      "name": "Barrierefreiheits-Audit und Umsetzung (WCAG 2.1 AA, EN 301 549, BFSG)",
+      "serviceType": "Beratung zur digitalen Barrierefreiheit",
+      "provider": { "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person" },
+      "areaServed": ["DE", "AT", "RO"],
+      "availableLanguage": ["de", "en", "ro"],
+      "offers": [
+        { "@type": "Offer", "name": "Schnellcheck", "price": "490", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Vollständiges Audit", "price": "1900", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Umsetzung im Code", "price": "2500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Monitoring", "price": "250", "priceCurrency": "EUR" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./" aria-current="page"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Barrierefreie Websites</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menü" data-close="Schließen"><span class="burger__label">Menü</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="study.html">Die Studie</a></li>
+        <li><a href="report.html">Musterbericht</a></li>
+        <li><a href="../en/demo.html" hreflang="en">Vorher/Nachher (EN)</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Sprache">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../de/" aria-current="true" hreflang="de">DE</a>
+      <a href="../ro/" hreflang="ro" lang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero">
+    <div class="wrap grid grid--side">
+      <div>
+        <h1>Ihr Onlineshop muss seit dem 28. Juni 2025 barrierefrei sein. Ich finde die Barrieren und behebe sie im Code.</h1>
+        <p class="lead">WCAG-2.1-AA-Audits und Umsetzung für Shops und Dienstleister in Deutschland, Österreich und Rumänien. Das BFSG gilt, die Marktüberwachung prüft, und die ersten Abmahnungen sind verschickt.</p>
+        <div class="cluster">
+          <a class="btn btn--signal" href="#contact">Schnellcheck buchen, 490 €</a>
+          <a class="btn btn--ghost" href="study.html">Zur Studie mit 42 Shops</a>
+        </div>
+        <p class="hero__law">Deutschland: Barrierefreiheitsstärkungsgesetz (BFSG). Österreich: BaFG. EU: European Accessibility Act. Rumänien: Legea 232/2022. Der technische Maßstab dahinter ist EN 301 549, also WCAG 2.1 Stufe AA.</p>
+      </div>
+
+      <div class="demo">
+        <p class="sr-only">Illustration: eine typische Produktseite mit vier markierten Barrieren. Das Produktbild hat keinen Alternativtext, das Suchfeld hat keine Beschriftung, der Button-Text hat einen Kontrast von 3,3 zu 1 statt 4,5 zu 1, und der Merkzettel-Icon-Button hat keinen Namen.</p>
+        <div class="mock" aria-hidden="true">
+          <div class="mock__bar"><span class="mock__logo"></span><span class="mock__search"></span><span class="mock__cart"></span></div>
+          <div class="mock__body">
+            <div class="mock__img"></div>
+            <div class="mock__info">
+              <div class="mock__title"></div>
+              <div class="mock__title mock__title--2"></div>
+              <div class="mock__price">49,90 €</div>
+              <div class="mock__cta"></div>
+              <div class="mock__field"></div>
+              <div class="mock__icon"></div>
+            </div>
+          </div>
+          <span class="marker marker--fail" style="--x: 3%; --y: 34%; --i: 0">Bild ohne Alternativtext</span>
+          <span class="marker marker--fail" style="--x: 24%; --y: -7%; --i: 1">Suchfeld ohne Beschriftung</span>
+          <span class="marker marker--fail" style="--x: 50%; --y: 57%; --i: 2">Kontrast 3,3:1, nötig sind 4,5:1</span>
+          <span class="marker marker--fail" style="--x: 44%; --y: 90%; --i: 3">Icon-Button ohne Namen</span>
+        </div>
+        <label class="demo__toggle"><input type="checkbox" id="show-barriers" checked> Barrieren in der Illustration anzeigen</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <h2 id="proof-title" class="sr-only">Ergebnisse meiner Studie mit 42 Shop-Startseiten</h2>
+      <ul class="proof__list">
+        <li><span class="proof__n">42</span><span class="proof__l">Startseiten am 15. September 2026 geprüft: 18 in Deutschland, 24 in Rumänien</span></li>
+        <li><span class="proof__n">37 von 42</span><span class="proof__l">scheitern an mindestens einer automatisch prüfbaren WCAG-2.1-AA-Anforderung</span></li>
+        <li><span class="proof__n">72 %</span><span class="proof__l">der deutschen Shops scheitern, 100 % der rumänischen</span></li>
+        <li><span class="proof__n">4 Fehlerarten</span><span class="proof__l">verursachen 87 % aller Verstöße: Kontrast, leere Links, fehlende Alternativtexte, unbenannte Buttons</span></li>
+      </ul>
+      <p class="small muted" style="margin: .5rem 0 1.2rem">Automatische Prüfungen finden nur einen Teil der Barrieren; die Zahlen sind Untergrenzen. <a href="study.html">Methode, Tabelle und Beobachtungen</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="law-title">
+    <div class="wrap">
+      <h2 id="law-title" class="section-title">Was das Gesetz von Ihnen verlangt</h2>
+      <p class="lead measure">Drei Dinge, die jeder Shopbetreiber wissen sollte, bevor der Brief der Marktüberwachung kommt.</p>
+      <ul class="facts" style="margin-top: 2rem">
+        <li>
+          <h3>Es gilt seit dem 28. Juni 2025</h3>
+          <p>Das BFSG erfasst Onlineshops, Bankdienste, Ticket- und Verkehrsangebote, Telekommunikation und E-Books. Für bestehende Websites gibt es keine allgemeine Schonfrist; Übergangsregeln gelten nur für Verträge, die vor diesem Datum geschlossen wurden.</p>
+          <p>Kleinstunternehmen mit weniger als 10 Beschäftigten und unter 2 Millionen € Umsatz sind bei Dienstleistungen ausgenommen.</p>
+        </li>
+        <li>
+          <h3>Der Maßstab ist WCAG 2.1 AA</h3>
+          <p>Das Gesetz verweist auf die EN 301 549, diese auf WCAG 2.1 Stufe AA: ausreichender Kontrast, vollständige Tastaturbedienung, Namen für jedes Bedienelement, saubere Struktur, nutzbare Formulare und Zoom bis 200 %.</p>
+          <p>Außerdem müssen Sie eine Erklärung zur Barrierefreiheit veröffentlichen.</p>
+        </li>
+        <li>
+          <h3>Die Durchsetzung läuft</h3>
+          <p>Bußgelder bis 100.000 € nach § 37 BFSG. Abmahnungen gibt es seit August 2025. Die Marktüberwachungsstelle der Länder (MLBF) ist seit Anfang 2026 in der Kontrollphase und prüft Shops ab Herbst 2026 auch automatisiert.</p>
+          <p>Österreich setzt das BaFG durch, Rumänien das Gesetz 232/2022 über ANPC, ADR und ANCOM.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="process-title">
+    <div class="wrap">
+      <h2 id="process-title" class="section-title">So arbeite ich</h2>
+      <p class="lead measure">Erst das Audit, dann die Umsetzung in Ihrem echten Code, dann eine Erklärung, hinter der Sie stehen können.</p>
+      <ol class="steps" style="margin-top: 2rem">
+        <li><div class="step__body"><h3>Schnellcheck, 3 Werktage</h3><p>Automatische Prüfung von Startseite, Produktseite und Checkout plus manueller Durchgang mit Tastatur und Screenreader. Sie erhalten eine priorisierte Liste und ein Festpreisangebot für den Rest.</p></div></li>
+        <li><div class="step__body"><h3>Vollständiges Audit, 2 Wochen</h3><p>Alle Templates gegen die WCAG-2.1-AA-Checkliste: NVDA und VoiceOver, nur Tastatur, 200 % Zoom, mobil. Ein Bericht, mit dem Ihre Entwickler direkt arbeiten können, plus Entwurf der Erklärung zur Barrierefreiheit.</p></div></li>
+        <li><div class="step__body"><h3>Umsetzung im Code</h3><p>Ich setze die Korrekturen in Ihrem Theme oder Frontend um, Shopify, WooCommerce, Magento, Shopware oder Eigenentwicklung, als Pull Requests, die Sie prüfen können. Jede Korrektur wird nachgetestet.</p></div></li>
+        <li><div class="step__body"><h3>Erklärung und Monitoring</h3><p>Die Erklärung zur Barrierefreiheit geht online, ein monatlicher Scan wacht über Rückschritte, und jedes Release bekommt eine Stichprobe.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 id="services-title" class="section-title">Leistungen und Preise</h2>
+      <p class="lead measure">Festpreise, wo der Umfang feststeht, ein Angebot, wo er von Ihrem Code abhängt. Alle Preise zuzüglich Umsatzsteuer.</p>
+      <div class="table-wrap" style="margin-top: 2rem" role="region" aria-label="Leistungstabelle" tabindex="0">
+        <table class="packages">
+          <caption class="sr-only">Vier Leistungen mit Umfang, Lieferzeit und Preis</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Merkmal</span></th>
+              <th scope="col">Schnellcheck</th>
+              <th scope="col" class="featured">Vollständiges Audit</th>
+              <th scope="col">Umsetzung im Code</th>
+              <th scope="col">Monitoring</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Geeignet für</th>
+              <td>Wissen, wo Sie stehen, bevor Sie budgetieren</td>
+              <td>Shops und Dienstleister, die ein vollständiges Bild und eine Erklärung brauchen</td>
+              <td>Konformität erreichen, ohne das eigene Team zu binden</td>
+              <td>Nach jedem Release konform bleiben</td>
+            </tr>
+            <tr>
+              <th scope="row">Enthalten</th>
+              <td>3 Schlüsselseiten, automatische und manuelle Prüfung, priorisierte Liste, Angebot</td>
+              <td>Bis zu 10 Templates, komplette WCAG-2.1-AA-Checkliste, Screenreader, Tastatur, Zoom, mobil, Entwicklerbericht, Entwurf der Erklärung</td>
+              <td>Umsetzung in Ihrer Codebasis als geprüfte Pull Requests, Nachtest, finale Erklärung</td>
+              <td>Monatlicher automatischer Scan, vierteljährliche manuelle Stichprobe, Pflege der Erklärung</td>
+            </tr>
+            <tr>
+              <th scope="row">Lieferzeit</th>
+              <td>3 Werktage</td>
+              <td>2 Wochen</td>
+              <td>Je nach Umfang, meist 2 bis 6 Wochen</td>
+              <td>Laufend, monatlich kündbar</td>
+            </tr>
+            <tr>
+              <th scope="row">Preis</th>
+              <td><span class="price">490 €</span></td>
+              <td><span class="price">ab 1.900 €</span></td>
+              <td><span class="price">ab 2.500 €<small>Angebot nach dem Audit</small></span></td>
+              <td><span class="price">250 €<small>pro Monat</small></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="sr-only">Aktion</span></th>
+              <td><a class="btn btn--signal" href="#contact">Schnellcheck buchen</a></td>
+              <td><a class="btn" href="#contact">Audit anfragen</a></td>
+              <td><a class="btn btn--ghost" href="#contact">Angebot anfragen</a></td>
+              <td><a class="btn btn--ghost" href="#contact">Monitoring anfragen</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top: 1rem">Beratungsleistungen zur Barrierefreiheit können in Deutschland über die BAFA-Förderung „Förderung unternehmerischen Know-hows“ bezuschusst werden; ich unterstütze beim Antrag. Agenturen: Audits und Umsetzung liefere ich auch als White-Label unter Ihrem Namen.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="finding-title">
+    <div class="wrap grid grid--side">
+      <div>
+        <h2 id="finding-title" class="section-title">So sieht ein Befund aus</h2>
+        <p>Jeder Punkt in meinen Berichten nennt die Regel, die Auswirkung, die Zahl der betroffenen Elemente, den Fundort und die Korrektur. Dieser Befund ist echt und stammt von einem mittelgroßen rumänischen Elektronik-Shop aus der Studie.</p>
+        <p><a href="report.html">Den vollständigen Musterbericht lesen</a> oder <a href="../en/demo.html" hreflang="en">sechs typische Barrieren vorher und nachher ansehen (englisch)</a>.</p>
+      </div>
+      <article class="finding">
+        <div class="finding__head">
+          <h3>Karussell-Buttons ohne zugänglichen Namen</h3>
+          <span class="badge badge--critical">Kritisch</span>
+        </div>
+        <div class="finding__meta"><span>WCAG 4.1.2 Name, Rolle, Wert</span><span>axe-Regel button-name</span><span>9 Elemente</span></div>
+        <dl>
+          <dt>Befund</dt><dd>Die Slider-Punkte auf der Startseite sind Buttons mit einem leeren <code>span</code>. Ein Screenreader sagt neunmal „Schaltfläche“, ohne Hinweis darauf, was sie tun.</dd>
+          <dt>Korrektur</dt><dd>Jeder Button bekommt eine sichtbare oder visuell verborgene Beschriftung, der aktive wird markiert.</dd>
+        </dl>
+<pre><code>&lt;!-- vorgefunden --&gt;
+&lt;button class="owl-dot"&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+
+&lt;!-- korrigiert --&gt;
+&lt;button class="owl-dot" aria-current="true"&gt;
+  &lt;span class="sr-only"&gt;Folie 1 von 9&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="about-title">
+    <div class="wrap about">
+      <img src="../assets/img/daniel.jpg" alt="Daniel Butnar" width="320" height="400" loading="lazy">
+      <div>
+        <h2 id="about-title" class="section-title">Mit wem Sie arbeiten würden</h2>
+        <p>Ich bin Daniel Butnar, Webentwickler in Bukarest. Ich arbeite mit Next.js, React und reinem HTML und habe meine eigenen Websites schon nach WCAG AA gebaut, bevor das Gesetz es verlangte. Ich spreche Deutsch, Rumänisch und Englisch: Audit, Erklärung und Entwickler-Übergabe kommen in Ihrer Sprache, und ich kann direkt mit Ihrer Agentur sprechen.</p>
+        <p>Ich nutze automatisierte Werkzeuge, auch KI-gestützte Code-Prüfung, um schnell in die Breite zu kommen. Jeder Befund im Bericht ist von Hand geprüft, denn Scanner finden nur einen Teil, und ein Bericht voller Fehlalarme kostet Ihre Entwickler Zeit.</p>
+        <ul class="tools" aria-label="Werkzeuge, mit denen ich teste">
+          <li>axe-core</li><li>NVDA</li><li>VoiceOver</li><li>Nur Tastatur</li><li>200 % Zoom</li><li>Chrome und Firefox</li><li>iOS und Android</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink on-ink" id="contact" aria-labelledby="contact-title">
+    <div class="wrap grid grid--side">
+      <div>
+        <h2 id="contact-title" class="section-title">Schnellcheck buchen</h2>
+        <p class="lead">Schicken Sie mir die Adresse Ihres Shops. Sie bekommen innerhalb eines Werktags eine Antwort und innerhalb von drei Werktagen den Bericht.</p>
+        <p>Lieber per E-Mail? Schreiben Sie an <a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a>.</p>
+        <p class="small muted">Das Formular wird über FormSubmit zugestellt, siehe <a href="privacy.html">Datenschutz</a>. Es werden keine Cookies gesetzt.</p>
+      </div>
+      <form class="form" method="post" action="https://formsubmit.co/daniel.butnar@gmail.com" data-form data-subject="Anfrage Schnellcheck" data-msg-invalid="Bitte prüfen Sie die markierten Felder." data-msg-sending="Wird gesendet…" data-msg-ok="Danke, Ihre Nachricht ist unterwegs. Ich antworte innerhalb eines Werktags." data-msg-err="Das Senden ist fehlgeschlagen. Bitte schreiben Sie mir direkt an" novalidate>
+        <input type="hidden" name="_subject" value="Anfrage Schnellcheck">
+        <input type="hidden" name="_template" value="table">
+        <div class="honey" aria-hidden="true"><label>Dieses Feld bitte leer lassen <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field" data-error="Bitte geben Sie Ihren Namen ein.">
+          <label for="f-name">Ihr Name</label>
+          <input id="f-name" name="Name" type="text" required autocomplete="name">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field" data-error="Bitte geben Sie eine gültige E-Mail-Adresse ein, zum Beispiel name@firma.de.">
+          <label for="f-email">E-Mail</label>
+          <input id="f-email" name="Email" type="email" required autocomplete="email" aria-describedby="f-email-hint">
+          <span class="hint" id="f-email-hint">An diese Adresse antworte ich.</span>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-company">Unternehmen</label>
+          <input id="f-company" name="Company" type="text" autocomplete="organization">
+        </div>
+        <div class="field" data-error="Bitte geben Sie die Adresse Ihres Shops ein, beginnend mit https://.">
+          <label for="f-site">Adresse des Shops</label>
+          <input id="f-site" name="Website" type="url" required inputmode="url" placeholder="https://" autocomplete="url">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field" data-error="Bitte schreiben Sie eine kurze Nachricht.">
+          <label for="f-msg">Worum geht es?</label>
+          <textarea id="f-msg" name="Message" required minlength="10" maxlength="3000"></textarea>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <p class="form__status" role="status" aria-live="polite"></p>
+        <div><button class="btn btn--signal" type="submit">Anfrage senden</button></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Webentwickler in Bukarest. Barrierefreiheits-Audits und Umsetzung für Onlineshops und Dienstleister in Deutschland, Österreich und Rumänien.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="#services">Leistungen und Preise</a></li>
+          <li><a href="study.html">Die Studie: 42 Shops geprüft</a></li>
+          <li><a href="report.html">Musterbericht</a></li>
+          <li><a href="../en/demo.html" hreflang="en">Vorher/Nachher (englisch)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <ul>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="imprint.html">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>Keine Cookies, kein Tracking. Umgesetzt nach WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

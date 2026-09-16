@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Web accessibility for online shops | Daniel Butnar</title>
+<meta name="description" content="WCAG 2.1 AA audits and code fixes for online shops and services under the European Accessibility Act, BFSG and Legea 232/2022. Quick check from 490 €.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ro_RO">
+<meta property="og:title" content="Web accessibility for online shops | Daniel Butnar">
+<meta property="og:description" content="WCAG 2.1 AA audits and code fixes for online shops and services under the European Accessibility Act, BFSG and Legea 232/2022. Quick check from 490 €.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/en/">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person",
+      "name": "Daniel Butnar",
+      "jobTitle": "Web developer and digital accessibility specialist",
+      "url": "https://danielbutnar2003.github.io/accessibility-portfolio/en/",
+      "email": "daniel.butnar@gmail.com",
+      "image": "https://danielbutnar2003.github.io/accessibility-portfolio/assets/img/daniel.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bucharest", "addressCountry": "RO" },
+      "knowsLanguage": ["en", "de", "ro"],
+      "sameAs": ["https://github.com/danielbutnar2003", "https://github.com/danielbutnar", "https://goactivebucharest.me/daniel-butnar.html"]
+    },
+    {
+      "@type": "Service",
+      "name": "Web accessibility audit and remediation (WCAG 2.1 AA, EN 301 549)",
+      "serviceType": "Digital accessibility consulting",
+      "provider": { "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person" },
+      "areaServed": ["DE", "AT", "RO"],
+      "availableLanguage": ["en", "de", "ro"],
+      "offers": [
+        { "@type": "Offer", "name": "Quick check", "price": "490", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Full audit", "price": "1900", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Fix in code", "price": "2500", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Monitoring", "price": "250", "priceCurrency": "EUR" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#website",
+      "url": "https://danielbutnar2003.github.io/accessibility-portfolio/",
+      "name": "Daniel Butnar",
+      "inLanguage": ["en", "de", "ro"],
+      "publisher": { "@id": "https://danielbutnar2003.github.io/accessibility-portfolio/#person" }
+    }
+  ]
+}
+</script>
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./" aria-current="page"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Web accessibility</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menu" data-close="Close"><span class="burger__label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="study.html">The study</a></li>
+        <li><a href="report.html">Sample report</a></li>
+        <li><a href="demo.html">Before and after</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Language">
+      <a href="../en/" aria-current="true" hreflang="en">EN</a>
+      <a href="../de/" hreflang="de" lang="de">DE</a>
+      <a href="../ro/" hreflang="ro" lang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero">
+    <div class="wrap grid grid--side">
+      <div>
+        <h1>Your online shop has to be accessible by law. I find the barriers and fix them in the code.</h1>
+        <p class="lead">WCAG 2.1 AA audits and remediation for shops and services in Germany, Austria and Romania. The European Accessibility Act has applied since 28 June 2025, and market surveillance and the first warning letters have started.</p>
+        <div class="cluster">
+          <a class="btn btn--signal" href="#contact">Book a quick check, 490 €</a>
+          <a class="btn btn--ghost" href="study.html">See the study of 42 shops</a>
+        </div>
+        <p class="hero__law">EU: European Accessibility Act. Germany: BFSG. Austria: BaFG. Romania: Legea 232/2022. The technical standard behind all four is EN 301 549, which means WCAG 2.1 level AA.</p>
+      </div>
+
+      <div class="demo">
+        <p class="sr-only">Illustration: a typical product page with four barriers marked. The product image has no text alternative, the search field has no label, the button text has a contrast of 3.3 to 1 instead of 4.5 to 1, and the wishlist icon button has no name.</p>
+        <div class="mock" aria-hidden="true">
+          <div class="mock__bar"><span class="mock__logo"></span><span class="mock__search"></span><span class="mock__cart"></span></div>
+          <div class="mock__body">
+            <div class="mock__img"></div>
+            <div class="mock__info">
+              <div class="mock__title"></div>
+              <div class="mock__title mock__title--2"></div>
+              <div class="mock__price">49.90 €</div>
+              <div class="mock__cta"></div>
+              <div class="mock__field"></div>
+              <div class="mock__icon"></div>
+            </div>
+          </div>
+          <span class="marker marker--fail" style="--x: 3%; --y: 34%; --i: 0">Image has no text alternative</span>
+          <span class="marker marker--fail" style="--x: 24%; --y: -7%; --i: 1">Search field has no label</span>
+          <span class="marker marker--fail" style="--x: 50%; --y: 57%; --i: 2">Button contrast 3.3:1, needs 4.5:1</span>
+          <span class="marker marker--fail" style="--x: 44%; --y: 90%; --i: 3">Icon button has no name</span>
+        </div>
+        <label class="demo__toggle"><input type="checkbox" id="show-barriers" checked> Show the barriers on the illustration</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <h2 id="proof-title" class="sr-only">Results of my study of 42 shop homepages</h2>
+      <ul class="proof__list">
+        <li><span class="proof__n">42</span><span class="proof__l">homepages audited on 15 September 2026: 24 in Romania, 18 in Germany</span></li>
+        <li><span class="proof__n">37 of 42</span><span class="proof__l">fail at least one WCAG 2.1 AA check that a scanner can detect</span></li>
+        <li><span class="proof__n">100 %</span><span class="proof__l">of the Romanian shops fail, and 72 % of the German ones</span></li>
+        <li><span class="proof__n">4 issues</span><span class="proof__l">cause 87 % of all failures: contrast, empty links, missing alt text, unnamed buttons</span></li>
+      </ul>
+      <p class="small muted" style="margin: .5rem 0 1.2rem">Automated checks find only part of the barriers, so these are lower bounds. <a href="study.html">Method, table and observations</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="law-title">
+    <div class="wrap">
+      <h2 id="law-title" class="section-title">What the law asks of you</h2>
+      <p class="lead measure">Three things every shop owner should know before the market surveillance letter arrives.</p>
+      <ul class="facts" style="margin-top: 2rem">
+        <li>
+          <h3>It has applied since 28 June 2025</h3>
+          <p>The European Accessibility Act covers online shops, banking, ticketing and transport, telecom and e-books. Existing sites get no general grace period; only contracts signed before that date have transitional rules.</p>
+          <p>Micro-enterprises with fewer than 10 staff and under 2 million € turnover are exempt for services.</p>
+        </li>
+        <li>
+          <h3>The bar is WCAG 2.1 AA</h3>
+          <p>The law points to EN 301 549, which points to WCAG 2.1 level AA: sufficient contrast, full keyboard use, names for every control, sensible structure, usable forms and zoom to 200 %.</p>
+          <p>You also have to publish an accessibility statement.</p>
+        </li>
+        <li>
+          <h3>Enforcement has started</h3>
+          <p>Germany: fines up to 100,000 € under § 37 BFSG, warning letters since August 2025, and the market surveillance office (MLBF) scanning shops from autumn 2026.</p>
+          <p>Romania: ANPC, ADR and ANCOM supervise Law 232/2022. Austria enforces the BaFG.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="process-title">
+    <div class="wrap">
+      <h2 id="process-title" class="section-title">How I work</h2>
+      <p class="lead measure">Audit first, then fixes in your actual code, then a statement you can stand behind.</p>
+      <ol class="steps" style="margin-top: 2rem">
+        <li><div class="step__body"><h3>Quick check, 3 working days</h3><p>Automated scan of your home, product and checkout pages plus a manual keyboard and screen-reader pass. You get a prioritised list and a fixed-price quote for the rest.</p></div></li>
+        <li><div class="step__body"><h3>Full audit, 2 weeks</h3><p>Every template against the WCAG 2.1 AA checklist: NVDA and VoiceOver, keyboard only, 200 % zoom, mobile. A report your developers can work from, and a draft accessibility statement.</p></div></li>
+        <li><div class="step__body"><h3>Fixes in code</h3><p>I implement the fixes in your theme or front end, Shopify, WooCommerce, Magento, Shopware or custom, as pull requests you can review. Each fix is re-tested.</p></div></li>
+        <li><div class="step__body"><h3>Statement and monitoring</h3><p>The accessibility statement goes live, a monthly scan watches for regressions, and every release gets a spot check.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 id="services-title" class="section-title">Services and prices</h2>
+      <p class="lead measure">Fixed prices where the scope is fixed, a quote where it depends on your code. All prices exclude VAT.</p>
+      <div class="table-wrap" style="margin-top: 2rem" role="region" aria-label="Services table" tabindex="0">
+        <table class="packages">
+          <caption class="sr-only">Four services with scope, delivery time and price</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Detail</span></th>
+              <th scope="col">Quick check</th>
+              <th scope="col" class="featured">Full audit</th>
+              <th scope="col">Fixes in code</th>
+              <th scope="col">Monitoring</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Best for</th>
+              <td>Knowing where you stand before you budget</td>
+              <td>Shops and services that need a complete picture and a statement</td>
+              <td>Getting to conformance without tying up your own team</td>
+              <td>Staying conformant after every release</td>
+            </tr>
+            <tr>
+              <th scope="row">Included</th>
+              <td>3 key pages, automated and manual checks, prioritised list, quote</td>
+              <td>Up to 10 templates, full WCAG 2.1 AA checklist, screen readers, keyboard, zoom, mobile, developer report, statement draft</td>
+              <td>Implementation in your codebase as reviewed pull requests, re-testing, final statement</td>
+              <td>Monthly automated scan, quarterly manual spot check, statement updates</td>
+            </tr>
+            <tr>
+              <th scope="row">Delivery</th>
+              <td>3 working days</td>
+              <td>2 weeks</td>
+              <td>Depends on scope, typically 2 to 6 weeks</td>
+              <td>Ongoing, cancel monthly</td>
+            </tr>
+            <tr>
+              <th scope="row">Price</th>
+              <td><span class="price">490 €</span></td>
+              <td><span class="price">from 1,900 €</span></td>
+              <td><span class="price">from 2,500 €<small>quoted after the audit</small></span></td>
+              <td><span class="price">250 €<small>per month</small></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="sr-only">Action</span></th>
+              <td><a class="btn btn--signal" href="#contact">Book a quick check</a></td>
+              <td><a class="btn" href="#contact">Request an audit</a></td>
+              <td><a class="btn btn--ghost" href="#contact">Ask for a quote</a></td>
+              <td><a class="btn btn--ghost" href="#contact">Ask about monitoring</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top: 1rem">Agencies: I also work white-label, audits and fixes delivered under your name.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" aria-labelledby="finding-title">
+    <div class="wrap grid grid--side">
+      <div>
+        <h2 id="finding-title" class="section-title">What a finding looks like</h2>
+        <p>Every issue in my reports names the rule, the impact, how many elements are affected, where they are, and the fix. This one is real, taken from a mid-size Romanian electronics shop in the study.</p>
+        <p><a href="report.html">Read the full sample report</a> or <a href="demo.html">see six common barriers before and after</a>.</p>
+      </div>
+      <article class="finding">
+        <div class="finding__head">
+          <h3>Carousel buttons have no accessible name</h3>
+          <span class="badge badge--critical">Critical</span>
+        </div>
+        <div class="finding__meta"><span>WCAG 4.1.2 Name, Role, Value</span><span>axe rule button-name</span><span>9 elements</span></div>
+        <dl>
+          <dt>Found</dt><dd>The slider dots on the homepage are buttons containing an empty <code>span</code>. A screen reader announces “button” nine times with no indication of what each does.</dd>
+          <dt>Fix</dt><dd>Give each button a visible or visually hidden label, and mark the current one.</dd>
+        </dl>
+<pre><code>&lt;!-- as found --&gt;
+&lt;button class="owl-dot"&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+
+&lt;!-- fixed --&gt;
+&lt;button class="owl-dot" aria-current="true"&gt;
+  &lt;span class="sr-only"&gt;Slide 1 of 9&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="about-title">
+    <div class="wrap about">
+      <img src="../assets/img/daniel.jpg" alt="Daniel Butnar" width="320" height="400" loading="lazy">
+      <div>
+        <h2 id="about-title" class="section-title">Who you would work with</h2>
+        <p>I am Daniel Butnar, a web developer in Bucharest. I build with Next.js, React and plain HTML, and I have held my own sites to WCAG AA since before the law required it. I speak German, Romanian and English, so the audit, the statement and the developer hand-off arrive in your language, and I can talk to your agency directly.</p>
+        <p>I use automated tooling, including AI-assisted code review, to cover ground fast. Every finding in a report has been checked by hand, because scanners only find part of the picture and a report full of false positives wastes your developers’ time.</p>
+        <ul class="tools" aria-label="Tools I test with">
+          <li>axe-core</li><li>NVDA</li><li>VoiceOver</li><li>Keyboard only</li><li>200 % zoom</li><li>Chrome and Firefox</li><li>iOS and Android</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink on-ink" id="contact" aria-labelledby="contact-title">
+    <div class="wrap grid grid--side">
+      <div>
+        <h2 id="contact-title" class="section-title">Book a quick check</h2>
+        <p class="lead">Send me the address of your shop. You get a reply within one working day, and the report within three.</p>
+        <p>Prefer e-mail? Write to <a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a>.</p>
+        <p class="small muted">The form is delivered by FormSubmit; see the <a href="privacy.html">privacy page</a>. No cookies are set.</p>
+      </div>
+      <form class="form" method="post" action="https://formsubmit.co/daniel.butnar@gmail.com" data-form data-subject="Quick check request" data-msg-invalid="Please check the highlighted fields." data-msg-sending="Sending…" data-msg-ok="Thanks, your message is on its way. I reply within one working day." data-msg-err="Sending failed. Please e-mail me directly at" novalidate>
+        <input type="hidden" name="_subject" value="Quick check request">
+        <input type="hidden" name="_template" value="table">
+        <div class="honey" aria-hidden="true"><label>Leave this field empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field" data-error="Please enter your name.">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="Name" type="text" required autocomplete="name">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field" data-error="Please enter a valid e-mail address, for example name@company.com.">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" name="Email" type="email" required autocomplete="email" aria-describedby="f-email-hint">
+          <span class="hint" id="f-email-hint">I reply to this address.</span>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-company">Company</label>
+          <input id="f-company" name="Company" type="text" autocomplete="organization">
+        </div>
+        <div class="field" data-error="Please enter the address of your shop, starting with https://.">
+          <label for="f-site">Shop address</label>
+          <input id="f-site" name="Website" type="url" required inputmode="url" placeholder="https://" autocomplete="url">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field" data-error="Please write a short message.">
+          <label for="f-msg">What do you need?</label>
+          <textarea id="f-msg" name="Message" required minlength="10" maxlength="3000"></textarea>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <p class="form__status" role="status" aria-live="polite"></p>
+        <div><button class="btn btn--signal" type="submit">Send request</button></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Web developer in Bucharest. Accessibility audits and fixes for online shops and services in Germany, Austria and Romania.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="#services">Services and prices</a></li>
+          <li><a href="study.html">The study: 42 shops audited</a></li>
+          <li><a href="report.html">Sample audit report</a></li>
+          <li><a href="demo.html">Before and after</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="imprint.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>No cookies, no tracking. Built to WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

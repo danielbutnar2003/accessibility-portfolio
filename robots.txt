@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://danielbutnar2003.github.io/accessibility-portfolio/sitemap.xml

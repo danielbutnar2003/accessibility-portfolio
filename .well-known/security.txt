@@ -1,0 +1,4 @@
+Contact: mailto:daniel.butnar@gmail.com
+Expires: 2027-09-15T00:00:00.000Z
+Preferred-Languages: en, de, ro
+Canonical: https://danielbutnar2003.github.io/accessibility-portfolio/.well-known/security.txt

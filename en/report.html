@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Sample accessibility report: Shop RO-08 | Daniel Butnar</title>
+<meta name="description" content="A real quick-check report, anonymised: a Romanian electronics shop with 5 failed WCAG 2.1 AA rules on 79 elements, prioritised with evidence and fixes.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/report.html">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/report.html">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/report.html">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/report.html">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/report.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Sample accessibility report: Shop RO-08">
+<meta property="og:description" content="A real quick-check report, anonymised: 5 failed WCAG 2.1 AA rules on 79 elements, prioritised, with evidence, fixes and effort.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/en/report.html">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Web accessibility</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menu" data-close="Close"><span class="burger__label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="./#services">Services</a></li>
+        <li><a href="study.html">The study</a></li>
+        <li><a href="report.html" aria-current="page">Sample report</a></li>
+        <li><a href="demo.html">Before and after</a></li>
+        <li><a href="./#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Language">
+      <a href="../en/report.html" aria-current="true" hreflang="en">EN</a>
+      <a href="../de/report.html" hreflang="de" lang="de">DE</a>
+      <a href="../ro/report.html" hreflang="ro" lang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+  <div class="wrap section">
+    <p class="measure no-print" style="margin-bottom: 1.5rem">This is what a client receives after a quick check, shortened for the web. The shop is real and taken from <a href="study.html">the study</a>; its name is withheld. The numbers, evidence and colour values are the ones the scan produced on 15 September 2026.</p>
+
+    <article class="doc">
+      <header class="doc__cover">
+        <p class="small muted" style="margin-bottom: .4rem">Accessibility quick check, sample report</p>
+        <h1>Shop RO-08: homepage against WCAG 2.1 AA</h1>
+        <p class="lead">Electronics retailer, Romania, mid-size. Result: not conformant. Five rules fail on 79 elements, ten of them critical. Almost all of it comes from four places in the code.</p>
+        <dl class="doc__meta">
+          <div><dt>Client</dt><dd>Shop RO-08 (name withheld)</dd></div>
+          <div><dt>Date of scan</dt><dd>15 September 2026</dd></div>
+          <div><dt>Scope of this sample</dt><dd>Homepage, desktop 1366 × 768, automated scan plus structure checks</dd></div>
+          <div><dt>Standard</dt><dd>WCAG 2.1 level AA via EN 301 549, as required by Legea 232/2022 and the European Accessibility Act</dd></div>
+          <div><dt>Tools</dt><dd>axe-core 4.13 in Google Chrome, driven by Playwright</dd></div>
+          <div><dt>Prepared by</dt><dd>Daniel Butnar</dd></div>
+        </dl>
+      </header>
+
+      <h2>1. Summary</h2>
+      <div class="table-wrap" role="region" aria-label="Results at a glance" tabindex="0">
+        <table>
+          <caption class="sr-only">Results at a glance</caption>
+          <tbody>
+            <tr><th scope="row">Failed rules (WCAG 2.1 A/AA)</th><td class="num">5</td><th scope="row">Language declared</th><td>yes, <code>ro</code></td></tr>
+            <tr><th scope="row">Failing elements</th><td class="num">79</td><th scope="row">Level-one heading</th><td>none</td></tr>
+            <tr><th scope="row">Critical</th><td class="num">10</td><th scope="row">Skip link</th><td>none (first link is “back to top”)</td></tr>
+            <tr><th scope="row">Serious</th><td class="num">69</td><th scope="row">Images</th><td>395, all with an alt attribute</td></tr>
+            <tr><th scope="row">Needs manual review</th><td class="num">43</td><th scope="row">HTML elements on the page</th><td class="num">5,445</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The failures are concentrated: one carousel component, one banner template, one search form and three colour values in the theme account for 78 of the 79 failing elements. Fixing those four places fixes the homepage, and because they are shared templates, most of the rest of the site.</p>
+      <p><strong>Estimated remediation effort:</strong> 2 to 4 developer days including re-testing, assuming access to the theme's source. This estimate is for planning; a fixed quote follows once I have seen the code.</p>
+
+      <h2>2. Priorities</h2>
+      <ol>
+        <li><strong>Name the carousel controls.</strong> Critical, 9 elements, one component. Finding 1.</li>
+        <li><strong>Name the search button.</strong> Critical, 1 element. Finding 2.</li>
+        <li><strong>Give the promotional links a name.</strong> Serious, 20 elements, one template. Finding 3.</li>
+        <li><strong>Correct three colour pairs in the theme.</strong> Serious, 48 elements. Finding 4.</li>
+        <li><strong>Underline the footer link.</strong> Serious, 1 element. Finding 5.</li>
+        <li><strong>Add a level-one heading and a skip link.</strong> Recommended. Finding 6.</li>
+      </ol>
+
+      <h2>3. Findings</h2>
+
+      <article class="finding">
+        <div class="finding__head"><h3>Finding 1: carousel dots have no accessible name</h3><span class="badge badge--critical">Critical</span></div>
+        <div class="finding__meta"><span>WCAG 4.1.2 Name, Role, Value</span><span>axe rule button-name</span><span>9 elements</span><span>Hero carousel, <code>.owl-dot</code></span></div>
+        <dl>
+          <dt>Evidence</dt><dd>Each slide indicator is a button containing an empty <code>span</code>. A screen reader announces “button” nine times in a row. The <code>role="button"</code> on a <code>button</code> is redundant.</dd>
+          <dt>Effect</dt><dd>Screen-reader and voice-control users cannot tell which slide a control selects or which one is active.</dd>
+          <dt>Fix</dt><dd>Add a visually hidden label to each button and mark the active one. If the slider library renders these, the label can be added in its <code>dotsData</code> or an <code>onInitialized</code> callback.</dd>
+          <dt>Effort</dt><dd>About one hour.</dd>
+        </dl>
+<pre><code>&lt;!-- as found --&gt;
+&lt;button role="button" class="owl-dot"&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+
+&lt;!-- fixed --&gt;
+&lt;button type="button" class="owl-dot" aria-current="true"&gt;
+  &lt;span class="sr-only"&gt;Slide 1 of 9&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+      </article>
+
+      <article class="finding">
+        <div class="finding__head"><h3>Finding 2: the search button has no name</h3><span class="badge badge--critical">Critical</span></div>
+        <div class="finding__meta"><span>WCAG 4.1.2 Name, Role, Value</span><span>axe rule input-button-name</span><span>1 element</span><span>Header search, <code>.submit-search</code></span></div>
+        <dl>
+          <dt>Evidence</dt><dd>The submit button of the site search is an <code>input</code> with an empty <code>value</code>; the magnifying glass is a background image.</dd>
+          <dt>Effect</dt><dd>Announced as “button” with no purpose. Voice-control users cannot say “click search”.</dd>
+          <dt>Fix</dt><dd>Give the input a value and keep the icon as a background, or switch to a <code>button</code> with hidden text.</dd>
+          <dt>Effort</dt><dd>Fifteen minutes.</dd>
+        </dl>
+<pre><code>&lt;!-- as found --&gt;
+&lt;input type="submit" value="" class="submit-search"&gt;
+
+&lt;!-- fixed --&gt;
+&lt;input type="submit" value="Search" class="submit-search"&gt;
+/* CSS keeps the icon and hides the text visually: */
+.submit-search { font-size: 0; color: transparent; background: url(search.svg) center / 20px no-repeat; }</code></pre>
+      </article>
+
+      <article class="finding">
+        <div class="finding__head"><h3>Finding 3: twenty promotional links have no text</h3><span class="badge badge--serious">Serious</span></div>
+        <div class="finding__meta"><span>WCAG 2.4.4 Link purpose, 4.1.2</span><span>axe rule link-name</span><span>20 elements</span><span>Pop-up banner and banner grid, <code>/ajax/bannerUrl?bannerId=…</code></span></div>
+        <dl>
+          <dt>Evidence</dt><dd>Every banner is a link that contains only an image, and the image's <code>alt</code> is empty. The link therefore has no accessible name; screen readers read “link” or the address.</dd>
+          <dt>Effect</dt><dd>The campaign content, currently the most prominent thing on the page, is invisible to screen-reader users. Twenty tab stops announce nothing.</dd>
+          <dt>Fix</dt><dd>Let the banner template write the campaign title into the image's <code>alt</code>. The text should say where the link goes, not what the picture shows. Banners that are purely decorative should not be links.</dd>
+          <dt>Effort</dt><dd>Two hours in the template, plus a title field for each banner in the CMS if it does not exist.</dd>
+        </dl>
+<pre><code>&lt;!-- as found --&gt;
+&lt;a href="/ajax/bannerUrl?bannerId=12594"&gt;&lt;img src="/banners/12594.jpg" alt=""&gt;&lt;/a&gt;
+
+&lt;!-- fixed --&gt;
+&lt;a href="/ajax/bannerUrl?bannerId=12594"&gt;
+  &lt;img src="/banners/12594.jpg" alt="Back to school: laptops from 1,499 lei" width="600" height="300"&gt;
+&lt;/a&gt;</code></pre>
+      </article>
+
+      <article class="finding">
+        <div class="finding__head"><h3>Finding 4: 48 text elements below the 4.5:1 contrast minimum</h3><span class="badge badge--serious">Serious</span></div>
+        <div class="finding__meta"><span>WCAG 1.4.3 Contrast (minimum)</span><span>axe rule color-contrast</span><span>48 elements</span><span>Menu, promo strip, product cards</span></div>
+        <dl>
+          <dt>Evidence</dt><dd>Three colour pairs produce all 48 failures.</dd>
+        </dl>
+        <div class="table-wrap" role="region" aria-label="Colour pairs that fail" tabindex="0">
+          <table>
+            <caption class="sr-only">Colour pairs that fail, with measured contrast and a suggested replacement</caption>
+            <thead><tr><th scope="col">Where</th><th scope="col">Colours as found</th><th scope="col" class="num">Measured</th><th scope="col">Suggested</th><th scope="col" class="num">Result</th></tr></thead>
+            <tbody>
+              <tr><td>Menu link “Servicii”, 15 px</td><td><code>#FF0000</code> on <code>#FFFFFF</code></td><td class="num">3.99:1</td><td><code>#C40000</code> on white</td><td class="num">6.3:1</td></tr>
+              <tr><td>Instalment promo strip, 20 px</td><td><code>#FFFFFF</code> on <code>#F76981</code></td><td class="num">2.87:1</td><td>white on <code>#C8102E</code></td><td class="num">5.9:1</td></tr>
+              <tr><td>“In stoc magazin” on product cards, 14.4 px</td><td><code>#349900</code> on <code>#FFFFFF</code></td><td class="num">3.68:1</td><td><code>#2E7D00</code> on white</td><td class="num">5.2:1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <dl>
+          <dt>Effect</dt><dd>People with low vision, older users and anyone outdoors on a phone cannot read stock status, prices in promotions or the service menu.</dd>
+          <dt>Fix</dt><dd>Change the three values where they are defined in the theme. The suggested colours keep the hue and pass AA; the designer may prefer other values as long as they reach 4.5:1.</dd>
+          <dt>Effort</dt><dd>Half a day, including a visual check of every place the tokens are used.</dd>
+        </dl>
+      </article>
+
+      <article class="finding">
+        <div class="finding__head"><h3>Finding 5: footer link is distinguishable only by colour</h3><span class="badge badge--serious">Serious</span></div>
+        <div class="finding__meta"><span>WCAG 1.4.1 Use of colour</span><span>axe rule link-in-text-block</span><span>1 element</span><span>Footer, “Vezi hartă”</span></div>
+        <dl>
+          <dt>Evidence</dt><dd>The link is <code>#666666</code> in a paragraph of <code>#999999</code> text, with no underline. The difference between link and text is 2.01:1; 3:1 is the minimum when colour is the only cue.</dd>
+          <dt>Fix</dt><dd>Underline links inside running text. This also solves the finding for every other paragraph link on the site.</dd>
+          <dt>Effort</dt><dd>Five minutes.</dd>
+        </dl>
+<pre><code>.footer p a { text-decoration: underline; text-underline-offset: .15em; }</code></pre>
+      </article>
+
+      <article class="finding finding--minor">
+        <div class="finding__head"><h3>Finding 6: no level-one heading and no skip link</h3><span class="badge badge--minor">Recommended</span></div>
+        <div class="finding__meta"><span>WCAG 2.4.1 Bypass blocks, 1.3.1 Info and relationships</span><span>Structure check</span><span>Whole page</span></div>
+        <dl>
+          <dt>Evidence</dt><dd>The page has no <code>h1</code>. The first focusable element is a “back to top” link labelled “SUS”, so keyboard users start their journey at the wrong end of the page and have to tab through the entire mega menu to reach the products.</dd>
+          <dt>Fix</dt><dd>Add one <code>h1</code> (the shop's name and tagline is fine on the homepage) and a skip link as the first element in <code>body</code> that points to the main content.</dd>
+          <dt>Effort</dt><dd>Half an hour.</dd>
+        </dl>
+<pre><code>&lt;a class="skip" href="#main"&gt;Sari la conținut&lt;/a&gt;
+…
+&lt;main id="main" tabindex="-1"&gt;</code></pre>
+      </article>
+
+      <h2>4. Needs manual review</h2>
+      <p>The scanner could not determine the contrast of 43 text elements because they sit on images or gradients (promotional tiles and category headers). In the paid quick check these are measured by hand and either cleared or added to Finding 4.</p>
+
+      <h2>5. What this sample does not include</h2>
+      <p>This page shows the automated part of a quick check on a single page. The quick check you order adds, for the homepage, a product page and the checkout:</p>
+      <ul>
+        <li>a keyboard-only pass: visible focus, focus order, whether the carousel and the mega menu can be operated and escaped, whether autoplay can be paused;</li>
+        <li>a screen-reader pass with NVDA through search, product selection and add-to-basket, and through the checkout forms with deliberately wrong input to hear the error messages;</li>
+        <li>200 % zoom and a 320 px wide viewport to check reflow;</li>
+        <li>a check of the accessibility statement, if one exists.</li>
+      </ul>
+
+      <h2>6. Next steps</h2>
+      <ol>
+        <li>Fix Findings 1 to 5 in the order above; the first two take an afternoon.</li>
+        <li>I re-test each fix and confirm it in writing. Re-testing is included when I implement the fixes and offered at a fixed price when your team does.</li>
+        <li>Publish an accessibility statement that names the standard, the known remaining issues and a contact for feedback. I provide the draft in Romanian, German or English.</li>
+      </ol>
+
+      <p class="doc__sig">Daniel Butnar, web developer and accessibility specialist, Bucharest. <a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a>. Scan date 15 September 2026, axe-core 4.13, WCAG 2.1 A and AA rule set. Automated checks find only part of the barriers; this report makes no claim about criteria that require manual testing.</p>
+    </article>
+
+    <div class="cluster no-print" style="margin-top: 2.5rem">
+      <a class="btn btn--signal" href="./#contact">Order a quick check for your shop, 490 €</a>
+      <a class="btn btn--ghost" href="demo.html">See the fixes in action</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Web developer in Bucharest. Accessibility audits and fixes for online shops and services in Germany, Austria and Romania.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="./#services">Services and prices</a></li>
+          <li><a href="study.html">The study: 42 shops audited</a></li>
+          <li><a href="report.html" aria-current="page">Sample audit report</a></li>
+          <li><a href="demo.html">Before and after</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="imprint.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>No cookies, no tracking. Built to WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

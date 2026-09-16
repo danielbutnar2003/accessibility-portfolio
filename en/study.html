@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>42 shop homepages audited for accessibility | Daniel Butnar</title>
+<meta name="description" content="One automated WCAG 2.1 AA check on 42 shop and service homepages in Romania and Germany: 37 fail. Method, full table and what the four most common failures are.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/study.html">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/study.html">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="42 shop homepages audited for accessibility: 37 fail">
+<meta property="og:description" content="One automated WCAG 2.1 AA check on 42 shop and service homepages in Romania and Germany. Method, full table and the four most common failures.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Web accessibility</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menu" data-close="Close"><span class="burger__label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="./#services">Services</a></li>
+        <li><a href="study.html" aria-current="page">The study</a></li>
+        <li><a href="report.html">Sample report</a></li>
+        <li><a href="demo.html">Before and after</a></li>
+        <li><a href="./#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Language">
+      <a href="../en/study.html" aria-current="true" hreflang="en">EN</a>
+      <a href="../de/study.html" hreflang="de" lang="de">DE</a>
+      <a href="../ro/study.html" hreflang="ro" lang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+  <article>
+    <header class="section" style="padding-bottom: 0">
+      <div class="wrap">
+        <h1 class="section-title" style="max-width: 20ch">42 shop homepages, one scanner, one afternoon: 37 fail</h1>
+        <p class="lead measure">On 15 September 2026 I ran the same automated WCAG 2.1 AA check on the homepages of 44 well-known online shops and service providers in Romania and Germany. Two blocked automated access. Of the 42 that answered, 37 have at least one detectable failure. This is roughly what a market surveillance scanner sees.</p>
+      </div>
+    </header>
+
+    <section class="proof" style="margin-top: 2.5rem" aria-labelledby="numbers-title">
+      <div class="wrap">
+        <h2 id="numbers-title" class="sr-only">Key numbers</h2>
+        <ul class="proof__list">
+          <li><span class="proof__n">37 of 42</span><span class="proof__l">homepages fail at least one WCAG 2.1 A or AA rule, 88 %</span></li>
+          <li><span class="proof__n">24 of 24</span><span class="proof__l">Romanian sites fail, with 77 failing elements per page on average (median 68)</span></li>
+          <li><span class="proof__n">13 of 18</span><span class="proof__l">German sites fail, with 13 failing elements per page on average (median 6)</span></li>
+          <li><span class="proof__n">21 of 42</span><span class="proof__l">have at least one critical issue, the kind that blocks a screen-reader user outright</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="common-title">
+      <div class="wrap grid grid--side">
+        <div>
+          <h2 id="common-title" class="section-title">What fails most often</h2>
+          <p>2,080 failing elements were found across the 42 pages. Four rule types account for 1,819 of them, 87 %. Each bar shows on how many of the 42 homepages the rule failed at least once.</p>
+          <p>These are the same failure types that WebAIM finds year after year on the top million homepages worldwide. None of them needs a redesign. All of them need someone to go through the templates.</p>
+        </div>
+        <ul class="bars" aria-label="Most common failures, number of homepages out of 42">
+          <li><span class="label"><span>Text contrast below 4.5:1</span><span class="val">22 sites, 1,073 elements</span></span><span class="bar bar--fail"><span style="--w: 52.4%"></span></span></li>
+          <li><span class="label"><span>Links without text (image and icon links)</span><span class="val">20 sites, 580 elements</span></span><span class="bar bar--fail"><span style="--w: 47.6%"></span></span></li>
+          <li><span class="label"><span>Images without alternative text</span><span class="val">12 sites, 89 elements</span></span><span class="bar bar--fail"><span style="--w: 28.6%"></span></span></li>
+          <li><span class="label"><span>Buttons without a name</span><span class="val">9 sites, 77 elements</span></span><span class="bar bar--fail"><span style="--w: 21.4%"></span></span></li>
+          <li><span class="label"><span>List markup misused</span><span class="val">5 sites, 61 elements</span></span><span class="bar"><span style="--w: 11.9%"></span></span></li>
+          <li><span class="label"><span>Zoom disabled in the viewport tag</span><span class="val">5 sites</span></span><span class="bar"><span style="--w: 11.9%"></span></span></li>
+          <li><span class="label"><span>Hidden from screen readers but keyboard-focusable</span><span class="val">4 sites, 41 elements</span></span><span class="bar"><span style="--w: 9.5%"></span></span></li>
+          <li><span class="label"><span>Invalid ARIA attributes</span><span class="val">4 sites, 13 elements</span></span><span class="bar"><span style="--w: 9.5%"></span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="obs-title">
+      <div class="wrap wrap--narrow">
+        <h2 id="obs-title" class="section-title">Six observations</h2>
+        <ol>
+          <li><strong>Germany and Romania are a year apart.</strong> Five German sites, all large brands in fashion, telecom, rail, banking and a general retailer, pass the automated check completely. No Romanian site does. Mid-size shops in both countries look alike in the kinds of failures; the Romanian ones just have many more of them.</li>
+          <li><strong>Passing the scanner is not conformance.</strong> Automated tools detect roughly a third of WCAG failures. The five clean German sites still need a keyboard, screen-reader and zoom pass before anyone should publish a statement claiming conformance.</li>
+          <li><strong>Contrast is a design-token problem.</strong> 1,073 low-contrast elements sounds like a lot. On most sites they come from three to six colour pairs defined once in the theme. Fix the tokens and the count drops to zero.</li>
+          <li><strong>Links without text are banners.</strong> Almost every one of the 580 empty links is a promotional image link or an icon link without alternative text. That is a template fix, not a content fix.</li>
+          <li><strong>Five sites lock out zoom.</strong> A single meta tag with <code>user-scalable=0</code> stops people from enlarging the page on their phone. It is a five-minute fix and a failure of WCAG 1.4.4 that affects everyone with reading glasses.</li>
+          <li><strong>Keyboard users land in the cookie banner.</strong> Only 11 of the 42 homepages offer a skip link. On several sites the first thing a keyboard user reaches is the consent dialog, and on some it is a link with no text at all.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="method-title">
+      <div class="wrap wrap--narrow">
+        <h2 id="method-title" class="section-title">Method</h2>
+        <details open>
+          <summary>What was tested, and how</summary>
+          <ul>
+            <li><strong>Sample:</strong> 44 homepages of well-known online shops and services, 24 in Romania and 20 in Germany, across retail sectors that the European Accessibility Act covers (electronics, fashion, DIY, books, pharmacy, furniture, toys, pets, beauty) plus telecom, banking and transport. Two German sites blocked automated access and are excluded.</li>
+            <li><strong>Tool:</strong> axe-core 4.13 with the WCAG 2.0 and 2.1 level A and AA rule set only, no best-practice rules. Driven by Playwright in Google Chrome on a 1366 by 768 desktop viewport.</li>
+            <li><strong>Cookie banners:</strong> where a “reject” or “accept” button could be found it was clicked so that the page behind the banner was scanned as well. Where it could not, the page was scanned as it landed.</li>
+            <li><strong>Date:</strong> 15 September 2026, one run per site.</li>
+            <li><strong>Counting:</strong> “failed rules” is the number of distinct axe rules with at least one failure; “failing elements” is the number of HTML elements that failed. Critical and serious follow axe's impact scale.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Limitations</summary>
+          <ul>
+            <li>Automated checks find only part of the barriers, commonly estimated at 30 to 40 %. Keyboard traps, focus order, screen-reader flows and understandable error messages need a person. All numbers here are lower bounds.</li>
+            <li>Only the homepage was scanned, on desktop. Product pages and checkouts usually contain more forms and more failures, not fewer.</li>
+            <li>A site with zero automated failures is not thereby conformant; a site with 300 failing elements may need only a handful of fixes if they come from one template.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Why the sites are anonymised</summary>
+          <p>The point is the pattern, not the pillory. Sites are identified by an ID, country, sector and size. I keep the named results and share a site's own row, with the full list of findings, free of charge with the people who run it. If you think your shop is in the table, <a href="./#contact">ask me for your row</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="table-title">
+      <div class="wrap">
+        <h2 id="table-title" class="section-title">All 42 sites</h2>
+        <p class="measure">Sorted by ID. “Most frequent issue” is the rule with the most failing elements on that page. “h1” counts level-one headings; a page should have exactly one.</p>
+        <div class="table-wrap" role="region" aria-label="Results table" tabindex="0">
+          <table class="study-table">
+            <caption class="sr-only">Automated WCAG 2.1 AA results for 42 homepages</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Country</th>
+                <th scope="col">Sector</th>
+                <th scope="col">Size</th>
+                <th scope="col" class="num">Failed rules</th>
+                <th scope="col" class="num">Failing elements</th>
+                <th scope="col" class="num">Critical</th>
+                <th scope="col" class="num">Serious</th>
+                <th scope="col">Most frequent issue</th>
+                <th scope="col">Skip link</th>
+                <th scope="col" class="num">h1</th>
+              </tr>
+            </thead>
+            <tbody>
+            <!-- STUDY_ROWS -->
+            <tr>
+              <th scope="row">DE-01</th>
+              <td>Germany</td>
+              <td>general retail</td>
+              <td>large</td>
+              <td class="num">4</td>
+              <td class="num">28</td>
+              <td class="num">14</td>
+              <td class="num">14</td>
+              <td>images without alt</td>
+              <td>no</td>
+              <td class="num">4</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-02</th>
+              <td>Germany</td>
+              <td>electronics</td>
+              <td>large</td>
+              <td class="num">6</td>
+              <td class="num">66</td>
+              <td class="num">15</td>
+              <td class="num">51</td>
+              <td>list structure</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-03</th>
+              <td>Germany</td>
+              <td>musical instruments</td>
+              <td>large</td>
+              <td class="num">4</td>
+              <td class="num">46</td>
+              <td class="num">25</td>
+              <td class="num">21</td>
+              <td>images without alt</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-06</th>
+              <td>Germany</td>
+              <td>DIY and garden</td>
+              <td>large</td>
+              <td class="num">1</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">10</td>
+              <td>hidden but focusable</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-07</th>
+              <td>Germany</td>
+              <td>fashion</td>
+              <td>large</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>none</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-08</th>
+              <td>Germany</td>
+              <td>IT and computers</td>
+              <td>mid-size</td>
+              <td class="num">4</td>
+              <td class="num">13</td>
+              <td class="num">8</td>
+              <td class="num">5</td>
+              <td>images without alt</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-09</th>
+              <td>Germany</td>
+              <td>IT and computers</td>
+              <td>mid-size</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td>buttons without name</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-10</th>
+              <td>Germany</td>
+              <td>electronics</td>
+              <td>large</td>
+              <td class="num">2</td>
+              <td class="num">20</td>
+              <td class="num">1</td>
+              <td class="num">19</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-11</th>
+              <td>Germany</td>
+              <td>car parts and tyres</td>
+              <td>mid-size</td>
+              <td class="num">2</td>
+              <td class="num">4</td>
+              <td class="num">0</td>
+              <td class="num">4</td>
+              <td>icons without name</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-12</th>
+              <td>Germany</td>
+              <td>outdoor</td>
+              <td>mid-size</td>
+              <td class="num">6</td>
+              <td class="num">18</td>
+              <td class="num">3</td>
+              <td class="num">15</td>
+              <td>nested controls</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-13</th>
+              <td>Germany</td>
+              <td>car parts and tyres</td>
+              <td>mid-size</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td>links without text</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-14</th>
+              <td>Germany</td>
+              <td>fashion</td>
+              <td>mid-size</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>none</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-15</th>
+              <td>Germany</td>
+              <td>toys</td>
+              <td>mid-size</td>
+              <td class="num">3</td>
+              <td class="num">8</td>
+              <td class="num">6</td>
+              <td class="num">2</td>
+              <td>images without alt</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-16</th>
+              <td>Germany</td>
+              <td>telecom</td>
+              <td>large</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>none</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-17</th>
+              <td>Germany</td>
+              <td>transport</td>
+              <td>large</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>none</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-18</th>
+              <td>Germany</td>
+              <td>transport</td>
+              <td>large</td>
+              <td class="num">4</td>
+              <td class="num">13</td>
+              <td class="num">3</td>
+              <td class="num">10</td>
+              <td>images without alt</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-19</th>
+              <td>Germany</td>
+              <td>banking</td>
+              <td>large</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>none</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-20</th>
+              <td>Germany</td>
+              <td>pharmacy</td>
+              <td>large</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td>frame without title</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-01</th>
+              <td>Romania</td>
+              <td>marketplace</td>
+              <td>large</td>
+              <td class="num">1</td>
+              <td class="num">139</td>
+              <td class="num">0</td>
+              <td class="num">139</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-02</th>
+              <td>Romania</td>
+              <td>electronics</td>
+              <td>large</td>
+              <td class="num">6</td>
+              <td class="num">152</td>
+              <td class="num">57</td>
+              <td class="num">95</td>
+              <td>links without text</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-03</th>
+              <td>Romania</td>
+              <td>fashion</td>
+              <td>large</td>
+              <td class="num">1</td>
+              <td class="num">171</td>
+              <td class="num">0</td>
+              <td class="num">171</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">24</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-04</th>
+              <td>Romania</td>
+              <td>DIY and garden</td>
+              <td>large</td>
+              <td class="num">2</td>
+              <td class="num">131</td>
+              <td class="num">0</td>
+              <td class="num">131</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-05</th>
+              <td>Romania</td>
+              <td>general retail</td>
+              <td>mid-size</td>
+              <td class="num">3</td>
+              <td class="num">313</td>
+              <td class="num">1</td>
+              <td class="num">312</td>
+              <td>links without text</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-06</th>
+              <td>Romania</td>
+              <td>electronics</td>
+              <td>large</td>
+              <td class="num">6</td>
+              <td class="num">95</td>
+              <td class="num">12</td>
+              <td class="num">83</td>
+              <td>list structure</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-07</th>
+              <td>Romania</td>
+              <td>electronics</td>
+              <td>mid-size</td>
+              <td class="num">3</td>
+              <td class="num">85</td>
+              <td class="num">5</td>
+              <td class="num">80</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-08</th>
+              <td>Romania</td>
+              <td>electronics</td>
+              <td>mid-size</td>
+              <td class="num">5</td>
+              <td class="num">79</td>
+              <td class="num">10</td>
+              <td class="num">69</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-09</th>
+              <td>Romania</td>
+              <td>books</td>
+              <td>mid-size</td>
+              <td class="num">3</td>
+              <td class="num">8</td>
+              <td class="num">0</td>
+              <td class="num">8</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-10</th>
+              <td>Romania</td>
+              <td>IT and computers</td>
+              <td>mid-size</td>
+              <td class="num">1</td>
+              <td class="num">84</td>
+              <td class="num">0</td>
+              <td class="num">84</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-11</th>
+              <td>Romania</td>
+              <td>books</td>
+              <td>mid-size</td>
+              <td class="num">7</td>
+              <td class="num">176</td>
+              <td class="num">19</td>
+              <td class="num">156</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-12</th>
+              <td>Romania</td>
+              <td>fashion</td>
+              <td>mid-size</td>
+              <td class="num">1</td>
+              <td class="num">3</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td>list structure</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-13</th>
+              <td>Romania</td>
+              <td>beauty</td>
+              <td>large</td>
+              <td class="num">4</td>
+              <td class="num">76</td>
+              <td class="num">0</td>
+              <td class="num">76</td>
+              <td>links without text</td>
+              <td>yes</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-14</th>
+              <td>Romania</td>
+              <td>pharmacy</td>
+              <td>mid-size</td>
+              <td class="num">1</td>
+              <td class="num">2</td>
+              <td class="num">0</td>
+              <td class="num">2</td>
+              <td>invalid ARIA</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-15</th>
+              <td>Romania</td>
+              <td>pharmacy</td>
+              <td>mid-size</td>
+              <td class="num">5</td>
+              <td class="num">22</td>
+              <td class="num">4</td>
+              <td class="num">18</td>
+              <td>links without text</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-16</th>
+              <td>Romania</td>
+              <td>furniture</td>
+              <td>mid-size</td>
+              <td class="num">3</td>
+              <td class="num">39</td>
+              <td class="num">10</td>
+              <td class="num">29</td>
+              <td>text contrast</td>
+              <td>yes</td>
+              <td class="num">5</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-17</th>
+              <td>Romania</td>
+              <td>toys</td>
+              <td>mid-size</td>
+              <td class="num">4</td>
+              <td class="num">21</td>
+              <td class="num">1</td>
+              <td class="num">19</td>
+              <td>text contrast</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-18</th>
+              <td>Romania</td>
+              <td>pet supplies</td>
+              <td>mid-size</td>
+              <td class="num">3</td>
+              <td class="num">131</td>
+              <td class="num">1</td>
+              <td class="num">130</td>
+              <td>text contrast</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-19</th>
+              <td>Romania</td>
+              <td>telecom</td>
+              <td>large</td>
+              <td class="num">2</td>
+              <td class="num">26</td>
+              <td class="num">7</td>
+              <td class="num">19</td>
+              <td>links without text</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-20</th>
+              <td>Romania</td>
+              <td>telecom</td>
+              <td>large</td>
+              <td class="num">4</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">9</td>
+              <td>list structure</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-21</th>
+              <td>Romania</td>
+              <td>banking</td>
+              <td>large</td>
+              <td class="num">2</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">9</td>
+              <td>text contrast</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-22</th>
+              <td>Romania</td>
+              <td>transport</td>
+              <td>mid-size</td>
+              <td class="num">6</td>
+              <td class="num">59</td>
+              <td class="num">5</td>
+              <td class="num">53</td>
+              <td>links without text</td>
+              <td>no</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-23</th>
+              <td>Romania</td>
+              <td>fashion</td>
+              <td>mid-size</td>
+              <td class="num">2</td>
+              <td class="num">3</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td>hidden but focusable</td>
+              <td>no</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-24</th>
+              <td>Romania</td>
+              <td>beauty</td>
+              <td>large</td>
+              <td class="num">1</td>
+              <td class="num">16</td>
+              <td class="num">0</td>
+              <td class="num">16</td>
+              <td>links without text</td>
+              <td>yes</td>
+              <td class="num">1</td>
+            </tr>
+            <!-- /STUDY_ROWS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--signal" aria-labelledby="cta-title">
+      <div class="wrap grid grid--side">
+        <div>
+          <h2 id="cta-title" class="section-title">Want the numbers for your own shop?</h2>
+          <p class="lead">The quick check runs this scan on your home, product and checkout pages, adds a manual keyboard and screen-reader pass, and gives you a prioritised list within three working days.</p>
+        </div>
+        <div class="cluster" style="align-self: center">
+          <a class="btn" href="./#contact">Book a quick check, 490 €</a>
+          <a class="btn btn--ghost" href="report.html">See a sample report</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Web developer in Bucharest. Accessibility audits and fixes for online shops and services in Germany, Austria and Romania.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="./#services">Services and prices</a></li>
+          <li><a href="study.html" aria-current="page">The study: 42 shops audited</a></li>
+          <li><a href="report.html">Sample audit report</a></li>
+          <li><a href="demo.html">Before and after</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="imprint.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>No cookies, no tracking. Built to WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Studiu: 42 de magazine verificate | Daniel Butnar</title>
+<meta name="description" content="O verificare automată WCAG 2.1 AA pe 42 de magazine și servicii din România și Germania: 37 pică. Metoda, tabelul complet și cele mai frecvente erori.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/study.html">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/study.html">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/study.html">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:title" content="42 de magazine online verificate pentru accesibilitate: 37 pică">
+<meta property="og:description" content="O verificare automată WCAG 2.1 AA pe 42 de pagini principale de magazine și servicii din România și Germania. Metoda, tabelul complet și cele patru erori cele mai frecvente.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/ro/study.html">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Sari la conținut</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Accesibilitate web</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Meniu" data-close="Închide"><span class="burger__label">Meniu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="./#services">Servicii</a></li>
+        <li><a href="study.html" aria-current="page">Studiul</a></li>
+        <li><a href="report.html">Raport model</a></li>
+        <li><a href="../en/demo.html" hreflang="en">Înainte/după (EN)</a></li>
+        <li><a href="./#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Limbă">
+      <a href="../en/study.html" hreflang="en" lang="en">EN</a>
+      <a href="../de/study.html" hreflang="de" lang="de">DE</a>
+      <a href="../ro/study.html" aria-current="true" hreflang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+  <article>
+    <header class="section" style="padding-bottom: 0">
+      <div class="wrap">
+        <h1 class="section-title" style="max-width: 22ch">42 de pagini principale, un scanner, o după-amiază: 37 pică</h1>
+        <p class="lead measure">Pe 15 septembrie 2026 am rulat aceeași verificare automată WCAG 2.1 AA pe paginile principale a 44 de magazine online și furnizori de servicii cunoscuți din România și Germania. Două au blocat accesul automat. Dintre cele 42 care au răspuns, 37 au cel puțin o eroare detectabilă. Cam asta vede un scanner al autorităților de supraveghere.</p>
+      </div>
+    </header>
+
+    <section class="proof" style="margin-top: 2.5rem" aria-labelledby="numbers-title">
+      <div class="wrap">
+        <h2 id="numbers-title" class="sr-only">Cifre-cheie</h2>
+        <ul class="proof__list">
+          <li><span class="proof__n">37 din 42</span><span class="proof__l">de pagini principale pică cel puțin o regulă WCAG 2.1 de nivel A sau AA, adică 88 %</span></li>
+          <li><span class="proof__n">24 din 24</span><span class="proof__l">de site-uri românești pică, cu 77 de elemente eronate pe pagină în medie (mediana 68)</span></li>
+          <li><span class="proof__n">13 din 18</span><span class="proof__l">site-uri germane pică, cu 13 elemente eronate pe pagină în medie (mediana 6)</span></li>
+          <li><span class="proof__n">21 din 42</span><span class="proof__l">au cel puțin o problemă critică, de felul celor care blochează complet un utilizator de cititor de ecran</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="common-title">
+      <div class="wrap grid grid--side">
+        <div>
+          <h2 id="common-title" class="section-title">Ce pică cel mai des</h2>
+          <p>Pe cele 42 de pagini au fost găsite 2.080 de elemente eronate. Patru tipuri de reguli explică 1.819 dintre ele, adică 87 %. Fiecare bară arată pe câte dintre cele 42 de pagini principale regula a picat cel puțin o dată.</p>
+          <p>Sunt aceleași tipuri de erori pe care WebAIM le găsește an de an pe cel mai vizitat milion de pagini principale din lume. Niciuna nu are nevoie de un redesign. Toate au nevoie de cineva care să treacă prin șabloane.</p>
+        </div>
+        <ul class="bars" aria-label="Cele mai frecvente erori, numărul de pagini principale din 42">
+          <li><span class="label"><span>Contrastul textului sub 4,5:1</span><span class="val">22 de site-uri, 1.073 elemente</span></span><span class="bar bar--fail"><span style="--w: 52.4%"></span></span></li>
+          <li><span class="label"><span>Linkuri fără text (linkuri-imagine și pictograme)</span><span class="val">20 de site-uri, 580 elemente</span></span><span class="bar bar--fail"><span style="--w: 47.6%"></span></span></li>
+          <li><span class="label"><span>Imagini fără text alternativ</span><span class="val">12 site-uri, 89 elemente</span></span><span class="bar bar--fail"><span style="--w: 28.6%"></span></span></li>
+          <li><span class="label"><span>Butoane fără nume</span><span class="val">9 site-uri, 77 elemente</span></span><span class="bar bar--fail"><span style="--w: 21.4%"></span></span></li>
+          <li><span class="label"><span>Marcaj de listă folosit greșit</span><span class="val">5 site-uri, 61 elemente</span></span><span class="bar"><span style="--w: 11.9%"></span></span></li>
+          <li><span class="label"><span>Zoom dezactivat din eticheta viewport</span><span class="val">5 site-uri</span></span><span class="bar"><span style="--w: 11.9%"></span></span></li>
+          <li><span class="label"><span>Ascuns de cititoarele de ecran, dar focalizabil de la tastatură</span><span class="val">4 site-uri, 41 elemente</span></span><span class="bar"><span style="--w: 9.5%"></span></span></li>
+          <li><span class="label"><span>Atribute ARIA invalide</span><span class="val">4 site-uri, 13 elemente</span></span><span class="bar"><span style="--w: 9.5%"></span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="obs-title">
+      <div class="wrap wrap--narrow">
+        <h2 id="obs-title" class="section-title">Șase observații</h2>
+        <ol>
+          <li><strong>Germania și România sunt la un an distanță.</strong> Cinci site-uri germane, toate branduri mari din modă, telecomunicații, transport feroviar, bănci și retail general, trec complet verificarea automată. Niciun site românesc nu o face. Magazinele de mărime medie din ambele țări au aceleași tipuri de erori; cele românești au doar mult mai multe.</li>
+          <li><strong>A trece de scanner nu înseamnă conformitate.</strong> Instrumentele automate detectează cam o treime din erorile WCAG. Și cele cinci site-uri germane curate au nevoie de o trecere cu tastatura, cititorul de ecran și zoom înainte ca cineva să publice o declarație care spune „conform”.</li>
+          <li><strong>Contrastul este o problemă de design tokens.</strong> 1.073 de elemente cu contrast slab sună mult. Pe majoritatea site-urilor vin din trei până la șase perechi de culori definite o singură dată în temă. Repari tokenii și numărul scade la zero.</li>
+          <li><strong>Linkurile fără text sunt bannere.</strong> Aproape fiecare dintre cele 580 de linkuri goale este un link-imagine promoțional sau un link-pictogramă fără text alternativ. E o corecție de șablon, nu de conținut.</li>
+          <li><strong>Cinci site-uri blochează zoomul.</strong> O singură etichetă meta cu <code>user-scalable=0</code> împiedică oamenii să mărească pagina pe telefon. E o corecție de cinci minute și o încălcare a WCAG 1.4.4 care afectează pe oricine poartă ochelari de citit.</li>
+          <li><strong>Utilizatorii de tastatură aterizează în bannerul de cookie-uri.</strong> Doar 11 din cele 42 de pagini principale oferă un link „sari la conținut”. Pe mai multe site-uri, primul lucru la care ajunge un utilizator de tastatură este dialogul de consimțământ, iar pe unele, un link fără niciun text.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="method-title">
+      <div class="wrap wrap--narrow">
+        <h2 id="method-title" class="section-title">Metoda</h2>
+        <details open>
+          <summary>Ce a fost testat și cum</summary>
+          <ul>
+            <li><strong>Eșantion:</strong> 44 de pagini principale ale unor magazine online și servicii cunoscute, 24 din România și 20 din Germania, din sectoare de retail acoperite de Legea 232/2022 (electronice, modă, bricolaj, cărți, farmacie, mobilă, jucării, animale de companie, cosmetice) plus telecomunicații, bănci și transport. Două site-uri germane au blocat accesul automat și sunt excluse.</li>
+            <li><strong>Instrument:</strong> axe-core 4.13 doar cu setul de reguli WCAG 2.0 și 2.1, nivelurile A și AA, fără reguli de bune practici. Rulat prin Playwright în Google Chrome, la un viewport desktop de 1366 pe 768.</li>
+            <li><strong>Bannere de cookie-uri:</strong> acolo unde a putut fi găsit un buton „respinge” sau „acceptă”, a fost apăsat, ca să fie scanată și pagina din spatele bannerului. Unde nu, pagina a fost scanată așa cum s-a încărcat.</li>
+            <li><strong>Data:</strong> 15 septembrie 2026, o singură rulare pe site.</li>
+            <li><strong>Numărătoare:</strong> „reguli picate” este numărul de reguli axe distincte cu cel puțin o eroare; „elemente eronate” este numărul de elemente HTML care au picat. Critic și grav urmează scara de impact a axe.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Limitări</summary>
+          <ul>
+            <li>Verificările automate găsesc doar o parte din bariere, estimată de obicei la 30-40 %. Capcanele de tastatură, ordinea focalizării, fluxurile cu cititor de ecran și mesajele de eroare inteligibile au nevoie de un om. Toate cifrele de aici sunt limite inferioare.</li>
+            <li>A fost scanată doar pagina principală, doar pe desktop. Paginile de produs și coșul conțin de obicei mai multe formulare și mai multe erori, nu mai puține.</li>
+            <li>Un site cu zero erori automate nu e prin asta conform; un site cu 300 de elemente eronate poate avea nevoie doar de câteva corecții, dacă vin dintr-un singur șablon.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>De ce sunt site-urile anonimizate</summary>
+          <p>Contează tiparul, nu stâlpul infamiei. Site-urile sunt identificate prin ID, țară, sector și mărime. Păstrez rezultatele cu nume și dau gratuit rândul unui site, cu lista completă a constatărilor, celor care îl administrează. Dacă bănuiești că magazinul tău este în tabel, <a href="./#contact">cere-mi rândul tău</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="table-title">
+      <div class="wrap">
+        <h2 id="table-title" class="section-title">Toate cele 42 de site-uri</h2>
+        <p class="measure">Sortate după ID. „Cea mai frecventă problemă” este regula cu cele mai multe elemente eronate pe pagina respectivă. „h1” numără titlurile de nivel unu; o pagină ar trebui să aibă exact unul.</p>
+        <div class="table-wrap" role="region" aria-label="Tabel rezultate" tabindex="0">
+          <table class="study-table">
+            <caption class="sr-only">Rezultate automate WCAG 2.1 AA pentru 42 de pagini principale</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Țara</th>
+                <th scope="col">Sector</th>
+                <th scope="col">Mărime</th>
+                <th scope="col" class="num">Reguli picate</th>
+                <th scope="col" class="num">Elemente eronate</th>
+                <th scope="col" class="num">Critice</th>
+                <th scope="col" class="num">Grave</th>
+                <th scope="col">Cea mai frecventă problemă</th>
+                <th scope="col">Link „sari la conținut”</th>
+                <th scope="col" class="num">h1</th>
+              </tr>
+            </thead>
+            <tbody>
+            <!-- STUDY_ROWS -->
+            <tr>
+              <th scope="row">DE-01</th>
+              <td>Germania</td>
+              <td>retail general</td>
+              <td>mare</td>
+              <td class="num">4</td>
+              <td class="num">28</td>
+              <td class="num">14</td>
+              <td class="num">14</td>
+              <td>imagini fără text alternativ</td>
+              <td>nu</td>
+              <td class="num">4</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-02</th>
+              <td>Germania</td>
+              <td>electronice</td>
+              <td>mare</td>
+              <td class="num">6</td>
+              <td class="num">66</td>
+              <td class="num">15</td>
+              <td class="num">51</td>
+              <td>structura listelor</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-03</th>
+              <td>Germania</td>
+              <td>instrumente muzicale</td>
+              <td>mare</td>
+              <td class="num">4</td>
+              <td class="num">46</td>
+              <td class="num">25</td>
+              <td class="num">21</td>
+              <td>imagini fără text alternativ</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-06</th>
+              <td>Germania</td>
+              <td>bricolaj și grădină</td>
+              <td>mare</td>
+              <td class="num">1</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">10</td>
+              <td>ascuns, dar focalizabil</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-07</th>
+              <td>Germania</td>
+              <td>modă</td>
+              <td>mare</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>niciuna</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-08</th>
+              <td>Germania</td>
+              <td>IT și calculatoare</td>
+              <td>medie</td>
+              <td class="num">4</td>
+              <td class="num">13</td>
+              <td class="num">8</td>
+              <td class="num">5</td>
+              <td>imagini fără text alternativ</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-09</th>
+              <td>Germania</td>
+              <td>IT și calculatoare</td>
+              <td>medie</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td>butoane fără nume</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-10</th>
+              <td>Germania</td>
+              <td>electronice</td>
+              <td>mare</td>
+              <td class="num">2</td>
+              <td class="num">20</td>
+              <td class="num">1</td>
+              <td class="num">19</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-11</th>
+              <td>Germania</td>
+              <td>piese auto și anvelope</td>
+              <td>medie</td>
+              <td class="num">2</td>
+              <td class="num">4</td>
+              <td class="num">0</td>
+              <td class="num">4</td>
+              <td>pictograme fără nume</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-12</th>
+              <td>Germania</td>
+              <td>outdoor</td>
+              <td>medie</td>
+              <td class="num">6</td>
+              <td class="num">18</td>
+              <td class="num">3</td>
+              <td class="num">15</td>
+              <td>controale imbricate</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-13</th>
+              <td>Germania</td>
+              <td>piese auto și anvelope</td>
+              <td>medie</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td>linkuri fără text</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-14</th>
+              <td>Germania</td>
+              <td>modă</td>
+              <td>medie</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>niciuna</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-15</th>
+              <td>Germania</td>
+              <td>jucării</td>
+              <td>medie</td>
+              <td class="num">3</td>
+              <td class="num">8</td>
+              <td class="num">6</td>
+              <td class="num">2</td>
+              <td>imagini fără text alternativ</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-16</th>
+              <td>Germania</td>
+              <td>telecomunicații</td>
+              <td>mare</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>niciuna</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-17</th>
+              <td>Germania</td>
+              <td>transport</td>
+              <td>mare</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>niciuna</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-18</th>
+              <td>Germania</td>
+              <td>transport</td>
+              <td>mare</td>
+              <td class="num">4</td>
+              <td class="num">13</td>
+              <td class="num">3</td>
+              <td class="num">10</td>
+              <td>imagini fără text alternativ</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-19</th>
+              <td>Germania</td>
+              <td>bancă</td>
+              <td>mare</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>niciuna</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-20</th>
+              <td>Germania</td>
+              <td>farmacie</td>
+              <td>mare</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td>cadru fără titlu</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-01</th>
+              <td>România</td>
+              <td>marketplace</td>
+              <td>mare</td>
+              <td class="num">1</td>
+              <td class="num">139</td>
+              <td class="num">0</td>
+              <td class="num">139</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-02</th>
+              <td>România</td>
+              <td>electronice</td>
+              <td>mare</td>
+              <td class="num">6</td>
+              <td class="num">152</td>
+              <td class="num">57</td>
+              <td class="num">95</td>
+              <td>linkuri fără text</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-03</th>
+              <td>România</td>
+              <td>modă</td>
+              <td>mare</td>
+              <td class="num">1</td>
+              <td class="num">171</td>
+              <td class="num">0</td>
+              <td class="num">171</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">24</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-04</th>
+              <td>România</td>
+              <td>bricolaj și grădină</td>
+              <td>mare</td>
+              <td class="num">2</td>
+              <td class="num">131</td>
+              <td class="num">0</td>
+              <td class="num">131</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-05</th>
+              <td>România</td>
+              <td>retail general</td>
+              <td>medie</td>
+              <td class="num">3</td>
+              <td class="num">313</td>
+              <td class="num">1</td>
+              <td class="num">312</td>
+              <td>linkuri fără text</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-06</th>
+              <td>România</td>
+              <td>electronice</td>
+              <td>mare</td>
+              <td class="num">6</td>
+              <td class="num">95</td>
+              <td class="num">12</td>
+              <td class="num">83</td>
+              <td>structura listelor</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-07</th>
+              <td>România</td>
+              <td>electronice</td>
+              <td>medie</td>
+              <td class="num">3</td>
+              <td class="num">85</td>
+              <td class="num">5</td>
+              <td class="num">80</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-08</th>
+              <td>România</td>
+              <td>electronice</td>
+              <td>medie</td>
+              <td class="num">5</td>
+              <td class="num">79</td>
+              <td class="num">10</td>
+              <td class="num">69</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-09</th>
+              <td>România</td>
+              <td>cărți</td>
+              <td>medie</td>
+              <td class="num">3</td>
+              <td class="num">8</td>
+              <td class="num">0</td>
+              <td class="num">8</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-10</th>
+              <td>România</td>
+              <td>IT și calculatoare</td>
+              <td>medie</td>
+              <td class="num">1</td>
+              <td class="num">84</td>
+              <td class="num">0</td>
+              <td class="num">84</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-11</th>
+              <td>România</td>
+              <td>cărți</td>
+              <td>medie</td>
+              <td class="num">7</td>
+              <td class="num">176</td>
+              <td class="num">19</td>
+              <td class="num">156</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-12</th>
+              <td>România</td>
+              <td>modă</td>
+              <td>medie</td>
+              <td class="num">1</td>
+              <td class="num">3</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td>structura listelor</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-13</th>
+              <td>România</td>
+              <td>cosmetice</td>
+              <td>mare</td>
+              <td class="num">4</td>
+              <td class="num">76</td>
+              <td class="num">0</td>
+              <td class="num">76</td>
+              <td>linkuri fără text</td>
+              <td>da</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-14</th>
+              <td>România</td>
+              <td>farmacie</td>
+              <td>medie</td>
+              <td class="num">1</td>
+              <td class="num">2</td>
+              <td class="num">0</td>
+              <td class="num">2</td>
+              <td>ARIA invalid</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-15</th>
+              <td>România</td>
+              <td>farmacie</td>
+              <td>medie</td>
+              <td class="num">5</td>
+              <td class="num">22</td>
+              <td class="num">4</td>
+              <td class="num">18</td>
+              <td>linkuri fără text</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-16</th>
+              <td>România</td>
+              <td>mobilă</td>
+              <td>medie</td>
+              <td class="num">3</td>
+              <td class="num">39</td>
+              <td class="num">10</td>
+              <td class="num">29</td>
+              <td>contrastul textului</td>
+              <td>da</td>
+              <td class="num">5</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-17</th>
+              <td>România</td>
+              <td>jucării</td>
+              <td>medie</td>
+              <td class="num">4</td>
+              <td class="num">21</td>
+              <td class="num">1</td>
+              <td class="num">19</td>
+              <td>contrastul textului</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-18</th>
+              <td>România</td>
+              <td>animale de companie</td>
+              <td>medie</td>
+              <td class="num">3</td>
+              <td class="num">131</td>
+              <td class="num">1</td>
+              <td class="num">130</td>
+              <td>contrastul textului</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-19</th>
+              <td>România</td>
+              <td>telecomunicații</td>
+              <td>mare</td>
+              <td class="num">2</td>
+              <td class="num">26</td>
+              <td class="num">7</td>
+              <td class="num">19</td>
+              <td>linkuri fără text</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-20</th>
+              <td>România</td>
+              <td>telecomunicații</td>
+              <td>mare</td>
+              <td class="num">4</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">9</td>
+              <td>structura listelor</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-21</th>
+              <td>România</td>
+              <td>bancă</td>
+              <td>mare</td>
+              <td class="num">2</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">9</td>
+              <td>contrastul textului</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-22</th>
+              <td>România</td>
+              <td>transport</td>
+              <td>medie</td>
+              <td class="num">6</td>
+              <td class="num">59</td>
+              <td class="num">5</td>
+              <td class="num">53</td>
+              <td>linkuri fără text</td>
+              <td>nu</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-23</th>
+              <td>România</td>
+              <td>modă</td>
+              <td>medie</td>
+              <td class="num">2</td>
+              <td class="num">3</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td>ascuns, dar focalizabil</td>
+              <td>nu</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-24</th>
+              <td>România</td>
+              <td>cosmetice</td>
+              <td>mare</td>
+              <td class="num">1</td>
+              <td class="num">16</td>
+              <td class="num">0</td>
+              <td class="num">16</td>
+              <td>linkuri fără text</td>
+              <td>da</td>
+              <td class="num">1</td>
+            </tr>
+            <!-- /STUDY_ROWS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--signal" aria-labelledby="cta-title">
+      <div class="wrap grid grid--side">
+        <div>
+          <h2 id="cta-title" class="section-title">Vrei cifrele pentru magazinul tău?</h2>
+          <p class="lead">Verificarea rapidă rulează această scanare pe pagina principală, pe o pagină de produs și pe coș, adaugă o trecere manuală cu tastatura și cititorul de ecran și îți dă o listă prioritizată în trei zile lucrătoare.</p>
+        </div>
+        <div class="cluster" style="align-self: center">
+          <a class="btn" href="./#contact">Rezervă o verificare rapidă, 490 €</a>
+          <a class="btn btn--ghost" href="report.html">Vezi un raport model</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Dezvoltator web în București. Audituri de accesibilitate și remediere pentru magazine online și servicii din România, Germania și Austria.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Pagini</h2>
+        <ul>
+          <li><a href="./#services">Servicii și prețuri</a></li>
+          <li><a href="study.html" aria-current="page">Studiul: 42 de magazine verificate</a></li>
+          <li><a href="report.html">Raport de audit model</a></li>
+          <li><a href="../en/demo.html" hreflang="en">Înainte/după (în engleză)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Confidențialitate</a></li>
+          <li><a href="imprint.html">Date de identificare</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>Fără cookie-uri, fără urmărire. Realizat conform WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

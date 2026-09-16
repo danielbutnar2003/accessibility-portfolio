@@ -1,0 +1,14 @@
+{
+  "name": "Daniel Butnar - Web accessibility for online shops",
+  "short_name": "Daniel Butnar",
+  "description": "WCAG 2.1 AA audits and remediation for online shops and services under the EAA, BFSG and Legea 232/2022.",
+  "start_url": "./en/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0F1F3D",
+  "icons": [
+    { "src": "assets/logo/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/logo/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/logo/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

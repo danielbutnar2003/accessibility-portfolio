@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>42 Shops auf Barrierefreiheit geprüft | Daniel Butnar</title>
+<meta name="description" content="Eine automatische WCAG-2.1-AA-Prüfung auf 42 Shop-Startseiten in Deutschland und Rumänien: 37 scheitern. Methode, Tabelle und die vier häufigsten Fehler.">
+<meta name="theme-color" content="#0F1F3D">
+<link rel="canonical" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/study.html">
+<link rel="alternate" hreflang="en" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<link rel="alternate" hreflang="de" href="https://danielbutnar2003.github.io/accessibility-portfolio/de/study.html">
+<link rel="alternate" hreflang="ro" href="https://danielbutnar2003.github.io/accessibility-portfolio/ro/study.html">
+<link rel="alternate" hreflang="x-default" href="https://danielbutnar2003.github.io/accessibility-portfolio/en/study.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Daniel Butnar">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="42 Shop-Startseiten auf Barrierefreiheit geprüft: 37 scheitern">
+<meta property="og:description" content="Eine automatische WCAG-2.1-AA-Prüfung auf 42 Shop- und Dienstleister-Startseiten in Deutschland und Rumänien. Methode, komplette Tabelle und die vier häufigsten Fehler.">
+<meta property="og:url" content="https://danielbutnar2003.github.io/accessibility-portfolio/de/study.html">
+<meta property="og:image" content="https://danielbutnar2003.github.io/accessibility-portfolio/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your online shop has to be accessible by law. I find the barriers and fix them in the code. Daniel Butnar.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="./"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#FFD100"/><circle cx="22" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="22" r="6.5" fill="#0F1F3D"/><circle cx="22" cy="42" r="6.5" fill="#0F1F3D"/><circle cx="42" cy="42" r="6.5" fill="#0F1F3D"/></svg><span>Daniel Butnar</span> <span class="brand__tag">Barrierefreie Websites</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menü" data-close="Schließen"><span class="burger__label">Menü</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="./#services">Leistungen</a></li>
+        <li><a href="study.html" aria-current="page">Die Studie</a></li>
+        <li><a href="report.html">Musterbericht</a></li>
+        <li><a href="../en/demo.html" hreflang="en">Vorher/Nachher (EN)</a></li>
+        <li><a href="./#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <nav class="lang" aria-label="Sprache">
+      <a href="../en/study.html" hreflang="en" lang="en">EN</a>
+      <a href="../de/study.html" aria-current="true" hreflang="de">DE</a>
+      <a href="../ro/study.html" hreflang="ro" lang="ro">RO</a>
+    </nav>
+  </div>
+</header>
+<div class="paving" aria-hidden="true"></div>
+
+<main id="main" tabindex="-1">
+  <article>
+    <header class="section" style="padding-bottom: 0">
+      <div class="wrap">
+        <h1 class="section-title" style="max-width: 20ch">42 Shop-Startseiten, ein Scanner, ein Nachmittag: 37 scheitern</h1>
+        <p class="lead measure">Am 15. September 2026 habe ich dieselbe automatische WCAG-2.1-AA-Prüfung auf den Startseiten von 44 bekannten Onlineshops und Dienstleistern in Deutschland und Rumänien laufen lassen. Zwei blockierten den automatisierten Zugriff. Von den 42, die antworteten, haben 37 mindestens einen erkennbaren Verstoß. Das ist ungefähr das, was ein Scanner der Marktüberwachung sieht.</p>
+      </div>
+    </header>
+
+    <section class="proof" style="margin-top: 2.5rem" aria-labelledby="numbers-title">
+      <div class="wrap">
+        <h2 id="numbers-title" class="sr-only">Kennzahlen</h2>
+        <ul class="proof__list">
+          <li><span class="proof__n">37 von 42</span><span class="proof__l">Startseiten scheitern an mindestens einer Regel der WCAG 2.1 auf Stufe A oder AA, also 88 %</span></li>
+          <li><span class="proof__n">13 von 18</span><span class="proof__l">deutschen Seiten scheitern, im Schnitt 13 fehlerhafte Elemente pro Seite (Median 6)</span></li>
+          <li><span class="proof__n">24 von 24</span><span class="proof__l">rumänischen Seiten scheitern, im Schnitt 77 fehlerhafte Elemente pro Seite (Median 68)</span></li>
+          <li><span class="proof__n">21 von 42</span><span class="proof__l">haben mindestens einen kritischen Fehler, also einen, der Screenreader-Nutzer komplett ausschließt</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="common-title">
+      <div class="wrap grid grid--side">
+        <div>
+          <h2 id="common-title" class="section-title">Was am häufigsten scheitert</h2>
+          <p>Auf den 42 Seiten wurden 2.080 fehlerhafte Elemente gefunden. Vier Regeltypen stehen für 1.819 davon, 87 %. Jeder Balken zeigt, auf wie vielen der 42 Startseiten die Regel mindestens einmal verletzt wurde.</p>
+          <p>Es sind dieselben Fehlerarten, die WebAIM Jahr für Jahr auf der Million meistbesuchter Startseiten weltweit findet. Keine davon braucht ein Redesign. Alle brauchen jemanden, der die Templates durchgeht.</p>
+        </div>
+        <ul class="bars" aria-label="Häufigste Verstöße, Anzahl der Startseiten von 42">
+          <li><span class="label"><span>Textkontrast unter 4,5:1</span><span class="val">22 Seiten, 1.073 Elemente</span></span><span class="bar bar--fail"><span style="--w: 52.4%"></span></span></li>
+          <li><span class="label"><span>Links ohne Text (Bild- und Icon-Links)</span><span class="val">20 Seiten, 580 Elemente</span></span><span class="bar bar--fail"><span style="--w: 47.6%"></span></span></li>
+          <li><span class="label"><span>Bilder ohne Alternativtext</span><span class="val">12 Seiten, 89 Elemente</span></span><span class="bar bar--fail"><span style="--w: 28.6%"></span></span></li>
+          <li><span class="label"><span>Buttons ohne Namen</span><span class="val">9 Seiten, 77 Elemente</span></span><span class="bar bar--fail"><span style="--w: 21.4%"></span></span></li>
+          <li><span class="label"><span>Falsch verwendetes Listen-Markup</span><span class="val">5 Seiten, 61 Elemente</span></span><span class="bar"><span style="--w: 11.9%"></span></span></li>
+          <li><span class="label"><span>Zoom im Viewport-Tag gesperrt</span><span class="val">5 Seiten</span></span><span class="bar"><span style="--w: 11.9%"></span></span></li>
+          <li><span class="label"><span>Vor Screenreadern versteckt, aber per Tastatur fokussierbar</span><span class="val">4 Seiten, 41 Elemente</span></span><span class="bar"><span style="--w: 9.5%"></span></span></li>
+          <li><span class="label"><span>Ungültige ARIA-Attribute</span><span class="val">4 Seiten, 13 Elemente</span></span><span class="bar"><span style="--w: 9.5%"></span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="obs-title">
+      <div class="wrap wrap--narrow">
+        <h2 id="obs-title" class="section-title">Sechs Beobachtungen</h2>
+        <ol>
+          <li><strong>Deutschland und Rumänien liegen ein Jahr auseinander.</strong> Fünf deutsche Seiten, alles große Marken aus Mode, Telekommunikation, Bahn, Bank und Universalversand, bestehen die automatische Prüfung vollständig. Keine rumänische Seite tut das. Mittelgroße Shops in beiden Ländern zeigen dieselben Fehlerarten, die rumänischen nur deutlich mehr davon.</li>
+          <li><strong>Den Scanner zu bestehen ist keine Konformität.</strong> Automatische Werkzeuge erkennen etwa ein Drittel der WCAG-Verstöße. Auch die fünf sauberen deutschen Seiten brauchen einen Durchgang mit Tastatur, Screenreader und Zoom, bevor jemand eine Erklärung mit dem Wort „konform“ veröffentlichen sollte.</li>
+          <li><strong>Kontrast ist ein Design-Token-Problem.</strong> 1.073 kontrastarme Elemente klingen nach viel. Auf den meisten Seiten stammen sie aus drei bis sechs Farbpaaren, die einmal im Theme definiert sind. Tokens korrigieren, und die Zahl fällt auf null.</li>
+          <li><strong>Links ohne Text sind Banner.</strong> Fast jeder der 580 leeren Links ist ein Werbebild-Link oder ein Icon-Link ohne Alternativtext. Das ist eine Template-Korrektur, keine Inhaltsarbeit.</li>
+          <li><strong>Fünf Seiten sperren den Zoom.</strong> Ein einziges Meta-Tag mit <code>user-scalable=0</code> verhindert, dass Menschen die Seite auf dem Handy vergrößern. Fünf Minuten Arbeit, und ein Verstoß gegen WCAG 1.4.4, der jeden mit Lesebrille trifft.</li>
+          <li><strong>Tastaturnutzer landen im Cookie-Banner.</strong> Nur 11 der 42 Startseiten bieten einen Sprunglink. Auf mehreren Seiten ist das Erste, was ein Tastaturnutzer erreicht, der Einwilligungsdialog, auf manchen ein Link ohne jeden Text.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="method-title">
+      <div class="wrap wrap--narrow">
+        <h2 id="method-title" class="section-title">Methode</h2>
+        <details open>
+          <summary>Was geprüft wurde, und wie</summary>
+          <ul>
+            <li><strong>Stichprobe:</strong> 44 Startseiten bekannter Onlineshops und Dienstleister, 20 in Deutschland und 24 in Rumänien, aus Handelsbranchen, die das BFSG erfasst (Elektronik, Mode, Baumarkt, Bücher, Apotheke, Möbel, Spielwaren, Tierbedarf, Kosmetik) sowie Telekommunikation, Bank und Verkehr. Zwei deutsche Seiten blockierten den automatisierten Zugriff und sind ausgeschlossen.</li>
+            <li><strong>Werkzeug:</strong> axe-core 4.13 nur mit dem Regelsatz WCAG 2.0 und 2.1, Stufen A und AA, ohne Best-Practice-Regeln. Gesteuert über Playwright in Google Chrome bei 1366 mal 768 Pixel Desktop-Viewport.</li>
+            <li><strong>Cookie-Banner:</strong> wo ein „Ablehnen“- oder „Akzeptieren“-Button gefunden wurde, wurde er geklickt, damit auch die Seite hinter dem Banner geprüft wird. Wo nicht, wurde die Seite so geprüft, wie sie geladen wurde.</li>
+            <li><strong>Datum:</strong> 15. September 2026, ein Durchlauf pro Seite.</li>
+            <li><strong>Zählweise:</strong> „verletzte Regeln“ ist die Zahl der axe-Regeln mit mindestens einem Verstoß; „fehlerhafte Elemente“ die Zahl der HTML-Elemente, die durchgefallen sind. Kritisch und schwer folgen der Auswirkungsskala von axe.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Grenzen</summary>
+          <ul>
+            <li>Automatische Prüfungen finden nur einen Teil der Barrieren, üblicherweise mit 30 bis 40 % angegeben. Tastaturfallen, Fokusreihenfolge, Screenreader-Abläufe und verständliche Fehlermeldungen brauchen einen Menschen. Alle Zahlen hier sind Untergrenzen.</li>
+            <li>Geprüft wurde nur die Startseite, nur am Desktop. Produktseiten und Checkouts enthalten meist mehr Formulare und mehr Verstöße, nicht weniger.</li>
+            <li>Eine Seite ohne automatische Verstöße ist dadurch nicht konform; eine Seite mit 300 fehlerhaften Elementen braucht vielleicht nur eine Handvoll Korrekturen, wenn sie aus einem Template stammen.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Warum die Seiten anonymisiert sind</summary>
+          <p>Es geht um das Muster, nicht um den Pranger. Die Seiten sind über ID, Land, Branche und Größe gekennzeichnet. Die benannten Ergebnisse bewahre ich auf und gebe die Zeile einer Seite mit allen Befunden kostenlos an die Menschen weiter, die sie betreiben. Wenn Sie vermuten, dass Ihr Shop in der Tabelle steht, <a href="./#contact">fragen Sie mich nach Ihrer Zeile</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="table-title">
+      <div class="wrap">
+        <h2 id="table-title" class="section-title">Alle 42 Seiten</h2>
+        <p class="measure">Sortiert nach ID. „Häufigster Fehler“ ist die Regel mit den meisten fehlerhaften Elementen auf der Seite. „h1“ zählt Überschriften erster Ebene; eine Seite sollte genau eine haben.</p>
+        <div class="table-wrap" role="region" aria-label="Ergebnistabelle" tabindex="0">
+          <table class="study-table">
+            <caption class="sr-only">Automatische WCAG-2.1-AA-Ergebnisse für 42 Startseiten</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Land</th>
+                <th scope="col">Branche</th>
+                <th scope="col">Größe</th>
+                <th scope="col" class="num">Verletzte Regeln</th>
+                <th scope="col" class="num">Fehlerhafte Elemente</th>
+                <th scope="col" class="num">Kritisch</th>
+                <th scope="col" class="num">Schwer</th>
+                <th scope="col">Häufigster Fehler</th>
+                <th scope="col">Sprunglink</th>
+                <th scope="col" class="num">h1</th>
+              </tr>
+            </thead>
+            <tbody>
+            <!-- STUDY_ROWS -->
+            <tr>
+              <th scope="row">DE-01</th>
+              <td>Deutschland</td>
+              <td>Universalversand</td>
+              <td>groß</td>
+              <td class="num">4</td>
+              <td class="num">28</td>
+              <td class="num">14</td>
+              <td class="num">14</td>
+              <td>Bilder ohne Alternativtext</td>
+              <td>nein</td>
+              <td class="num">4</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-02</th>
+              <td>Deutschland</td>
+              <td>Elektronik</td>
+              <td>groß</td>
+              <td class="num">6</td>
+              <td class="num">66</td>
+              <td class="num">15</td>
+              <td class="num">51</td>
+              <td>Listenstruktur</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-03</th>
+              <td>Deutschland</td>
+              <td>Musikinstrumente</td>
+              <td>groß</td>
+              <td class="num">4</td>
+              <td class="num">46</td>
+              <td class="num">25</td>
+              <td class="num">21</td>
+              <td>Bilder ohne Alternativtext</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-06</th>
+              <td>Deutschland</td>
+              <td>Baumarkt und Garten</td>
+              <td>groß</td>
+              <td class="num">1</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">10</td>
+              <td>versteckt, aber fokussierbar</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-07</th>
+              <td>Deutschland</td>
+              <td>Mode</td>
+              <td>groß</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>keiner</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-08</th>
+              <td>Deutschland</td>
+              <td>IT und Computer</td>
+              <td>mittel</td>
+              <td class="num">4</td>
+              <td class="num">13</td>
+              <td class="num">8</td>
+              <td class="num">5</td>
+              <td>Bilder ohne Alternativtext</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-09</th>
+              <td>Deutschland</td>
+              <td>IT und Computer</td>
+              <td>mittel</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td>Buttons ohne Namen</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-10</th>
+              <td>Deutschland</td>
+              <td>Elektronik</td>
+              <td>groß</td>
+              <td class="num">2</td>
+              <td class="num">20</td>
+              <td class="num">1</td>
+              <td class="num">19</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-11</th>
+              <td>Deutschland</td>
+              <td>Autoteile und Reifen</td>
+              <td>mittel</td>
+              <td class="num">2</td>
+              <td class="num">4</td>
+              <td class="num">0</td>
+              <td class="num">4</td>
+              <td>Icons ohne Namen</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-12</th>
+              <td>Deutschland</td>
+              <td>Outdoor</td>
+              <td>mittel</td>
+              <td class="num">6</td>
+              <td class="num">18</td>
+              <td class="num">3</td>
+              <td class="num">15</td>
+              <td>verschachtelte Bedienelemente</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-13</th>
+              <td>Deutschland</td>
+              <td>Autoteile und Reifen</td>
+              <td>mittel</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td>Links ohne Text</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-14</th>
+              <td>Deutschland</td>
+              <td>Mode</td>
+              <td>mittel</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>keiner</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-15</th>
+              <td>Deutschland</td>
+              <td>Spielwaren</td>
+              <td>mittel</td>
+              <td class="num">3</td>
+              <td class="num">8</td>
+              <td class="num">6</td>
+              <td class="num">2</td>
+              <td>Bilder ohne Alternativtext</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-16</th>
+              <td>Deutschland</td>
+              <td>Telekommunikation</td>
+              <td>groß</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>keiner</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-17</th>
+              <td>Deutschland</td>
+              <td>Verkehr</td>
+              <td>groß</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>keiner</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-18</th>
+              <td>Deutschland</td>
+              <td>Verkehr</td>
+              <td>groß</td>
+              <td class="num">4</td>
+              <td class="num">13</td>
+              <td class="num">3</td>
+              <td class="num">10</td>
+              <td>Bilder ohne Alternativtext</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-19</th>
+              <td>Deutschland</td>
+              <td>Bank</td>
+              <td>groß</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td class="num">0</td>
+              <td>keiner</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">DE-20</th>
+              <td>Deutschland</td>
+              <td>Apotheke</td>
+              <td>groß</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td>Frame ohne Titel</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-01</th>
+              <td>Rumänien</td>
+              <td>Marktplatz</td>
+              <td>groß</td>
+              <td class="num">1</td>
+              <td class="num">139</td>
+              <td class="num">0</td>
+              <td class="num">139</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-02</th>
+              <td>Rumänien</td>
+              <td>Elektronik</td>
+              <td>groß</td>
+              <td class="num">6</td>
+              <td class="num">152</td>
+              <td class="num">57</td>
+              <td class="num">95</td>
+              <td>Links ohne Text</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-03</th>
+              <td>Rumänien</td>
+              <td>Mode</td>
+              <td>groß</td>
+              <td class="num">1</td>
+              <td class="num">171</td>
+              <td class="num">0</td>
+              <td class="num">171</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">24</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-04</th>
+              <td>Rumänien</td>
+              <td>Baumarkt und Garten</td>
+              <td>groß</td>
+              <td class="num">2</td>
+              <td class="num">131</td>
+              <td class="num">0</td>
+              <td class="num">131</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-05</th>
+              <td>Rumänien</td>
+              <td>Universalversand</td>
+              <td>mittel</td>
+              <td class="num">3</td>
+              <td class="num">313</td>
+              <td class="num">1</td>
+              <td class="num">312</td>
+              <td>Links ohne Text</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-06</th>
+              <td>Rumänien</td>
+              <td>Elektronik</td>
+              <td>groß</td>
+              <td class="num">6</td>
+              <td class="num">95</td>
+              <td class="num">12</td>
+              <td class="num">83</td>
+              <td>Listenstruktur</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-07</th>
+              <td>Rumänien</td>
+              <td>Elektronik</td>
+              <td>mittel</td>
+              <td class="num">3</td>
+              <td class="num">85</td>
+              <td class="num">5</td>
+              <td class="num">80</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-08</th>
+              <td>Rumänien</td>
+              <td>Elektronik</td>
+              <td>mittel</td>
+              <td class="num">5</td>
+              <td class="num">79</td>
+              <td class="num">10</td>
+              <td class="num">69</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-09</th>
+              <td>Rumänien</td>
+              <td>Bücher</td>
+              <td>mittel</td>
+              <td class="num">3</td>
+              <td class="num">8</td>
+              <td class="num">0</td>
+              <td class="num">8</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-10</th>
+              <td>Rumänien</td>
+              <td>IT und Computer</td>
+              <td>mittel</td>
+              <td class="num">1</td>
+              <td class="num">84</td>
+              <td class="num">0</td>
+              <td class="num">84</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-11</th>
+              <td>Rumänien</td>
+              <td>Bücher</td>
+              <td>mittel</td>
+              <td class="num">7</td>
+              <td class="num">176</td>
+              <td class="num">19</td>
+              <td class="num">156</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-12</th>
+              <td>Rumänien</td>
+              <td>Mode</td>
+              <td>mittel</td>
+              <td class="num">1</td>
+              <td class="num">3</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td>Listenstruktur</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-13</th>
+              <td>Rumänien</td>
+              <td>Kosmetik</td>
+              <td>groß</td>
+              <td class="num">4</td>
+              <td class="num">76</td>
+              <td class="num">0</td>
+              <td class="num">76</td>
+              <td>Links ohne Text</td>
+              <td>ja</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-14</th>
+              <td>Rumänien</td>
+              <td>Apotheke</td>
+              <td>mittel</td>
+              <td class="num">1</td>
+              <td class="num">2</td>
+              <td class="num">0</td>
+              <td class="num">2</td>
+              <td>ungültiges ARIA</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-15</th>
+              <td>Rumänien</td>
+              <td>Apotheke</td>
+              <td>mittel</td>
+              <td class="num">5</td>
+              <td class="num">22</td>
+              <td class="num">4</td>
+              <td class="num">18</td>
+              <td>Links ohne Text</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-16</th>
+              <td>Rumänien</td>
+              <td>Möbel</td>
+              <td>mittel</td>
+              <td class="num">3</td>
+              <td class="num">39</td>
+              <td class="num">10</td>
+              <td class="num">29</td>
+              <td>Textkontrast</td>
+              <td>ja</td>
+              <td class="num">5</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-17</th>
+              <td>Rumänien</td>
+              <td>Spielwaren</td>
+              <td>mittel</td>
+              <td class="num">4</td>
+              <td class="num">21</td>
+              <td class="num">1</td>
+              <td class="num">19</td>
+              <td>Textkontrast</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-18</th>
+              <td>Rumänien</td>
+              <td>Tierbedarf</td>
+              <td>mittel</td>
+              <td class="num">3</td>
+              <td class="num">131</td>
+              <td class="num">1</td>
+              <td class="num">130</td>
+              <td>Textkontrast</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-19</th>
+              <td>Rumänien</td>
+              <td>Telekommunikation</td>
+              <td>groß</td>
+              <td class="num">2</td>
+              <td class="num">26</td>
+              <td class="num">7</td>
+              <td class="num">19</td>
+              <td>Links ohne Text</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-20</th>
+              <td>Rumänien</td>
+              <td>Telekommunikation</td>
+              <td>groß</td>
+              <td class="num">4</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">9</td>
+              <td>Listenstruktur</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-21</th>
+              <td>Rumänien</td>
+              <td>Bank</td>
+              <td>groß</td>
+              <td class="num">2</td>
+              <td class="num">10</td>
+              <td class="num">0</td>
+              <td class="num">9</td>
+              <td>Textkontrast</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-22</th>
+              <td>Rumänien</td>
+              <td>Verkehr</td>
+              <td>mittel</td>
+              <td class="num">6</td>
+              <td class="num">59</td>
+              <td class="num">5</td>
+              <td class="num">53</td>
+              <td>Links ohne Text</td>
+              <td>nein</td>
+              <td class="num">1</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-23</th>
+              <td>Rumänien</td>
+              <td>Mode</td>
+              <td>mittel</td>
+              <td class="num">2</td>
+              <td class="num">3</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td>versteckt, aber fokussierbar</td>
+              <td>nein</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <th scope="row">RO-24</th>
+              <td>Rumänien</td>
+              <td>Kosmetik</td>
+              <td>groß</td>
+              <td class="num">1</td>
+              <td class="num">16</td>
+              <td class="num">0</td>
+              <td class="num">16</td>
+              <td>Links ohne Text</td>
+              <td>ja</td>
+              <td class="num">1</td>
+            </tr>
+            <!-- /STUDY_ROWS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--signal" aria-labelledby="cta-title">
+      <div class="wrap grid grid--side">
+        <div>
+          <h2 id="cta-title" class="section-title">Wollen Sie die Zahlen für Ihren eigenen Shop?</h2>
+          <p class="lead">Der Schnellcheck führt diese Prüfung auf Ihrer Startseite, einer Produktseite und im Checkout durch, ergänzt einen manuellen Durchgang mit Tastatur und Screenreader und liefert Ihnen innerhalb von drei Werktagen eine priorisierte Liste.</p>
+        </div>
+        <div class="cluster" style="align-self: center">
+          <a class="btn" href="./#contact">Schnellcheck buchen, 490 €</a>
+          <a class="btn btn--ghost" href="report.html">Musterbericht ansehen</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <h2>Daniel Butnar</h2>
+        <p>Webentwickler in Bukarest. Barrierefreiheits-Audits und Umsetzung für Onlineshops und Dienstleister in Deutschland, Österreich und Rumänien.</p>
+        <p><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="./#services">Leistungen und Preise</a></li>
+          <li><a href="study.html" aria-current="page">Die Studie: 42 Shops geprüft</a></li>
+          <li><a href="report.html">Musterbericht</a></li>
+          <li><a href="../en/demo.html" hreflang="en">Vorher/Nachher (englisch)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <ul>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="imprint.html">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span data-year>2026</span> Daniel Butnar</span>
+      <span>Keine Cookies, kein Tracking. Umgesetzt nach WCAG 2.1 AA.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

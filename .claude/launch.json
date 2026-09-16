@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dlx", "serve@14", ".", "-l", "4173", "-n"],
+      "port": 4173
+    }
+  ]
+}
