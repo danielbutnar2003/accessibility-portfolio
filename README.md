@@ -19,7 +19,7 @@ The site's proof is a real study: on 15 September 2026 the homepages of 44 well-
 | `assets/img/daniel.jpg` | Profile photo |
 | `sitemap.xml`, `robots.txt`, `site.webmanifest`, `.nojekyll`, `.well-known/security.txt` | Deployment files, keep them |
 | `tools/audit/` | The audit pipeline (Node, playwright-core, axe-core). See below |
-| `_private/` | Git-ignored: named audit results, screenshots, summary, font sources |
+| `_private/` | Git-ignored: the list of audited sites (`targets.json`), named audit results, screenshots, summary, font sources |
 
 ## Before going live
 
@@ -52,22 +52,24 @@ Then open `http://localhost:4173/en/`. Opening the HTML files directly also work
 
 ## Content Security Policy
 
-Every page carries a CSP meta tag. The only inline script is `document.documentElement.classList.add("js")`, allowed by its sha256 hash (`qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U=`). Do not add other inline scripts or inline event handlers; put JavaScript in `main.js`. FormSubmit is the only external origin (`connect-src`, `form-action`).
+Every page except the root redirect stub (`index.html`, no script) carries a CSP meta tag; `404.html` allows no script at all. The only inline script is `document.documentElement.classList.add("js")`, allowed by its sha256 hash (`qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U=`). Do not add other inline scripts or inline event handlers; put JavaScript in `main.js`. FormSubmit is the only external origin (`connect-src`, `form-action`).
 
 ## The audit pipeline
 
 ```bash
 cd tools/audit
 pnpm install
-node audit.mjs                      # all targets in targets.json, 3 at a time
+node audit.mjs                      # all targets in ../../_private/targets.json, 3 at a time
 node audit.mjs --only ro-08,de-02   # a subset
 node build-study-table.mjs          # refill the tables in */study.html from _private/summary.json
 node make-images.mjs                # regenerate icons and the Open Graph image
+node self-check.mjs --base http://localhost:4173       # QA of this site: axe, head tags, links, console, overflow (pnpm run check)
+node behaviour-check.mjs --base http://localhost:4173  # keyboard, mobile menu, contact form (pnpm run check:behaviour)
 ```
 
 `audit.mjs` drives the installed Google Chrome through playwright-core, injects axe-core 4.13 with the WCAG 2.0/2.1 A and AA rule set, tries to dismiss cookie banners (reject first, then accept), records violations, "needs review" items, a few structure checks (lang, h1 count, first anchor) and a screenshot. Bot walls are detected and marked as blocked. Results go to `_private/audit-results.json`; the aggregate statistics and anonymised rows in `_private/summary.json` were produced by the one-off script embedded in the session that built the site and can be recreated from the results file.
 
-To use the pipeline for a client, add their pages to a copy of `targets.json`. Homepage-only automated scans are a starting point, not an audit: the sample report shows what the manual part adds.
+The list of audited sites is private: `audit.mjs` reads `_private/targets.json`, and the repository only tracks `targets.example.json`, which shows the shape (slug, url, country, sector, size). To use the pipeline for a client, put their pages in `_private/targets.json`; keep copies of the study's `targets.json` and `audit-results.json` first, because every run overwrites the results file. Homepage-only automated scans are a starting point, not an audit: the sample report shows what the manual part adds.
 
 ## Dates to remember
 

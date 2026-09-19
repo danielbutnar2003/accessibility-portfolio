@@ -1,5 +1,6 @@
 // Homepage accessibility audit: axe-core (WCAG 2.1 A/AA rules) via Playwright and the installed Chrome.
 // Usage: node audit.mjs [--only ro-01,de-02] [--concurrency 3]
+// Reads ../../_private/targets.json (named sites, git-ignored; shape in targets.example.json).
 // Writes ../../_private/audit-results.json (named, never published) and screenshots to ../../_private/shots/.
 import { chromium } from "playwright-core";
 import { createRequire } from "node:module";
@@ -19,7 +20,12 @@ const opt = (name, def) => { const i = args.indexOf(name); return i >= 0 ? args[
 const only = opt("--only", "").split(",").filter(Boolean);
 const concurrency = Number(opt("--concurrency", 3));
 
-const targets = JSON.parse(await readFile(path.join(HERE, "targets.json"), "utf8"))
+const TARGETS = path.join(OUT_DIR, "targets.json");
+const targetsJson = await readFile(TARGETS, "utf8").catch(() => {
+  console.error("No targets file at " + TARGETS + ".\nThe list of named sites is private and not in the repository. Copy tools/audit/targets.example.json to _private/targets.json and put the real sites there.");
+  process.exit(1);
+});
+const targets = JSON.parse(targetsJson)
   .filter((t) => !only.length || only.includes(t.slug));
 
 // Privacy-preserving first: try "reject", then fall back to "accept" so the page content becomes visible to axe.
