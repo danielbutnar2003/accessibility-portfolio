@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "audit": "node audit.mjs"
+    "audit": "node audit.mjs",
+    "check": "node self-check.mjs --base http://localhost:4173",
+    "check:behaviour": "node behaviour-check.mjs --base http://localhost:4173"
   },
   "dependencies": {
     "axe-core": "^4.13.0",
