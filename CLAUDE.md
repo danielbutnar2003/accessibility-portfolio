@@ -18,6 +18,25 @@ Static site (plain HTML/CSS/JS, no build step, no dependencies at runtime, no co
 - Deliberately broken examples on `en/demo.html` sit inside `inert` containers so the page itself stays conformant. Keep that.
 - German and Romanian copy: formal "Sie" in German, informal "tu" in Romanian, consistently. Flag translated copy for the owner's review.
 
+## Design
+Draft 2026-09-23, owner to edit. The tokens in `assets/css/style.css` are the source of truth; update this section when they change.
+- Palette, token → role → hex. Light only, no dark mode. The CSS header says every pair is AA or better; the ratios are from its comments.
+  - `--ink` → text, primary button, `.section--ink`, footer, focus ring → #0F1F3D (16:1 on white); `--ink-2` → button hover → #1B2E52.
+  - `--paper` → background → #FFFFFF; `--paper-2` → tinted sections, code, featured table row → #F2F4F8.
+  - `--slate` → secondary text → #475467 (7.6:1 on white); `--muted-d` → secondary text on ink → #B8C2D6 (9:1).
+  - `--signal` → accent, background or marker only, never text → #FFD100 (ink on it 11:1); `--signal-2` → its hover → #FFE566.
+  - `--fail` → danger → #B42318 (6.6:1), `--warn` → #B54708 (5.4:1), `--pass` → #067647 (5.7:1), each with a `-bg` tint (#FDEDEB, #FFF3E6, #E6F4EC). On ink, error and success text are the literals #FFB4A8 and #8CE0B0 (above 9:1).
+- Type: one family, Atkinson Hyperlegible Next (variable 200-800), chosen for low-vision legibility; Atkinson Hyperlegible Mono only for code. Headings weight 750. Scale `--t-s` to `--t-5`, a major third from 18 px (`html` at 112.5%): use a token, not a new size.
+- Spacing and radius: no spacing tokens. `--wrap` 1180px, `--gutter` clamp(18px, 4vw, 48px), `--header-h` 68px, `.section` padding clamp(3.2rem, 7vw, 6rem). Radius `--r` 6px; 10px on the mock shop, the report `.doc` and the photo; 999px pills for badges and tool tags.
+- Motion: `--ease` cubic-bezier(.2, .7, .1, 1), 0.2s colour transitions. The one animation is the hero mock: four barrier markers appear once, in sequence, only under `prefers-reduced-motion: no-preference`. No scroll reveals.
+- Voice: owners and operators of online shops and services in DE, AT and RO. First person singular ("I find the barriers and fix them in the code"), plain and factual, laws and dates named exactly, numbers only from the study. Sie in German, tu in Romanian. Banned words: none named yet (owner to add).
+- Keep: the tactile-paving strip (`.paving`, between header and `main`) as the one brand ornament; numbered steps only because the process is a real sequence; packages as a comparison table, not cards; findings with a severity badge and a left border in the status colour; the mock shop's abstract bars instead of real low-contrast text.
+- Avoid: yellow text; a second ornament; motion outside the hero mock; cards for things that compare; new hex literals where a token exists; any third-party asset.
+- References: owner to add. The one named reference is tactile paving (the `--signal` comment in the CSS).
+- Tried and rejected: none recorded yet. One line per rejected direction: what, when, why.
+- Redesign, new page or new page type: present two or three directions first (4-6 named hex values, type pairing, hero concept as an ASCII wireframe, one sentence on the memorable element) and wait for the owner's pick.
+- Mechanical check: `design-lint.json` (web-qa `design-lint.mjs`, a ratchet).
+
 ## Working here
 - Preview: `npx serve . -l 4173` or `.claude/launch.json` config `site`.
 - Checks, run from the repo root with the preview up on port 4173 (first time: `pnpm install` in `tools/audit/`; they drive the installed Chrome):

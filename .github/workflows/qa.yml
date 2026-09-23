@@ -1,0 +1,56 @@
+name: qa
+
+# The repo's own checks (see CLAUDE.md, "Working here"): self-check (axe, head tags, links, console and
+# CSP errors, overflow at 375 px on every page) and behaviour-check (tab order, focus ring, skip link,
+# mobile menu, contact form with FormSubmit mocked). GitHub Pages deploys main on its own; this only reports.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# The job only reads the code; the token needs no write access.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      # No root package.json, so the pnpm version is given here (the same as the tours repo's packageManager).
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 12.4.1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: tools/audit/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile --dir tools/audit
+      - name: Check that Google Chrome is installed
+        # The checks drive the installed Chrome (channel "chrome"); ubuntu-latest ships it.
+        run: |
+          if [ -x /opt/google/chrome/chrome ]; then /opt/google/chrome/chrome --version
+          else pnpm --dir tools/audit exec playwright-core install chrome; fi
+      - name: Serve the site on port 4173
+        id: serve
+        run: |
+          npx -y serve@14 . -l 4173 > "$RUNNER_TEMP/serve.log" 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -fs -o /dev/null http://localhost:4173/en/; then exit 0; fi
+            sleep 1
+          done
+          cat "$RUNNER_TEMP/serve.log"; exit 1
+      - run: node tools/audit/self-check.mjs --base http://localhost:4173
+      - run: node tools/audit/behaviour-check.mjs --base http://localhost:4173
+        # Also when self-check failed, so one run reports both.
+        if: ${{ !cancelled() && steps.serve.outcome == 'success' }}
