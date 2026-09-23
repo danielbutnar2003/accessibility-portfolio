@@ -1,0 +1,28 @@
+{
+  "max": {
+    "hex-outside-tokens": 19,
+    "svg-hex": 85,
+    "tailwind-arbitrary": 0,
+    "tailwind-arbitrary-color": 0,
+    "font-size-literals": 16,
+    "font-size-distinct": 13,
+    "radius-literals": 25,
+    "radius-distinct": 8,
+    "shadow-literals": 1,
+    "shadow-distinct": 1,
+    "spacing-literals": 167,
+    "spacing-distinct": 61,
+    "calibration-hex": 0,
+    "soft-shadow": 1,
+    "gradients": 4,
+    "eyebrow": 0,
+    "headline-accent": 0,
+    "numbered-marker": 0,
+    "arrow-glyph": 0,
+    "middle-dot": 0,
+    "em-dash-label": 0,
+    "mono-label": 0,
+    "scroll-reveal": 0
+  },
+  "allow": {}
+}
